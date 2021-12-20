@@ -1,0 +1,60 @@
+{
+  "name": "@bluepjs/example",
+  "version": "0.1.0",
+  "description": "@bluepjs example - Vue 3 based app with blueprints editor and browser VM, and simple express server to store library at backend and demonstrate nodejs running VM",
+  "scripts": {
+    "backend": "node server.js",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "keywords": [
+    "bluepjs",
+    "ide",
+    "blueprint",
+    "editor",
+    "vm",
+    "virtual machine",
+    "example"
+  ],
+  "author": "Evgeny Trifonov <abrakadobr@gmail.com>",
+  "homepage": "https://github.com/bluep-js/example",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bluep-js/example"
+  },
+  "bugs": {
+    "url": "https://github.com/bluep-js/example/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@bluepjs/vm": "^0.1.0",
+    "@bluepjs/vue3-ide": "^0.1.0",
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
+    "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2"
+  }
+}
