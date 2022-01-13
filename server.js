@@ -24,6 +24,7 @@ const DemoActor = require('./src/actor')
 // sample library configured for used id
 const demoActor = new DemoActor('90df7b49-7f94-4ac7-9bec-3193f20908b9')
 vm.M('actor').addActor(demoActor)
+vm.start()
 
 // express endpoints
 
@@ -36,7 +37,9 @@ app.get('/vm', (req, res) => {
 app.post('/libraries/save', (req, res) => {
   const libs = req.body.libraries
   fs.writeFileSync('./db.json', JSON.stringify({ libraries: libs }, null, 2))
+  vm.stop()
   vm.updateLibraries(libs)
+  vm.start()
   res.json(libs)
 })
 

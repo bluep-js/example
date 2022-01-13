@@ -7,16 +7,19 @@
         "deleteable": false
       },
       "functions": {
-        "cbbca6db-d335-437f-ad0b-2b565aa4b8cb": {
-          "code": "cbbca6db-d335-437f-ad0b-2b565aa4b8cb",
-          "name": "Cron every minute",
+        "e89eff34-4547-4092-9421-b4dde686a184": {
+          "code": "e89eff34-4547-4092-9421-b4dde686a184",
+          "name": "Every 5 sec",
           "type": "function",
           "library": "default",
-          "entry": "graph/call_1639682473944",
+          "entry": "graph/call_1642044994225",
           "context": {
             "inputs": {
               "now": {
-                "value": "2021-12-18T20:41:00.673Z"
+                "code": "now",
+                "name": "Now",
+                "type": "basic/datetime",
+                "value": "2022-01-13T04:36:35.141Z"
               }
             },
             "outputs": {},
@@ -24,7 +27,7 @@
           },
           "graph": {
             "nodes": {
-              "graph/call_1639682473944": {
+              "graph/call_1642044994225": {
                 "name": "Call",
                 "code": "graph/call",
                 "type": "execute",
@@ -37,15 +40,15 @@
                     "name": "Call",
                     "type": "basic/execute",
                     "connections": {
-                      "edge_1639702605176": {
-                        "id": "edge_1639702605176",
+                      "edge_1642046072689": {
+                        "id": "edge_1642046072689",
                         "type": "basic/execute",
                         "from": {
-                          "node": "graph/call_1639682473944",
+                          "node": "graph/call_1642044994225",
                           "slot": "call"
                         },
                         "to": {
-                          "node": "console/consolelog_1639682744889",
+                          "node": "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337",
                           "slot": "call"
                         }
                       }
@@ -54,209 +57,16 @@
                   "now": {
                     "code": "now",
                     "name": "Now",
-                    "type": "basic/datetime",
-                    "connections": {
-                      "edge_1639682741042": {
-                        "id": "edge_1639682741042",
-                        "type": "basic/datetime",
-                        "from": {
-                          "node": "graph/call_1639682473944",
-                          "slot": "now"
-                        },
-                        "to": {
-                          "node": "datetime/tostring_1639682737489",
-                          "slot": "datetime"
-                        }
-                      }
-                    }
+                    "type": "basic/datetime"
                   }
                 },
                 "of": "node",
-                "id": "graph/call_1639682473944"
+                "id": "graph/call_1642044994225",
+                "valid": true
               },
-              "datetime/tostring_1639682737489": {
-                "name": "To String",
-                "code": "datetime/tostring",
-                "type": "modifier",
-                "deleteable": true,
-                "addable": true,
-                "inputs": {
-                  "datetime": {
-                    "code": "datetime",
-                    "name": "Datetime",
-                    "type": "basic/datetime",
-                    "connections": {
-                      "edge_1639682741042": {
-                        "id": "edge_1639682741042",
-                        "type": "basic/datetime",
-                        "from": {
-                          "node": "graph/call_1639682473944",
-                          "slot": "now"
-                        },
-                        "to": {
-                          "node": "datetime/tostring_1639682737489",
-                          "slot": "datetime"
-                        }
-                      }
-                    }
-                  },
-                  "format": {
-                    "code": "format",
-                    "name": "Format",
-                    "type": "basic/string",
-                    "value": "YYYY-MM-DDTHH:mm:ss"
-                  }
-                },
-                "outputs": {
-                  "result": {
-                    "code": "result",
-                    "name": "Result",
-                    "type": "basic/string",
-                    "connections": {
-                      "edge_1639682756457": {
-                        "id": "edge_1639682756457",
-                        "type": "basic/string",
-                        "from": {
-                          "node": "datetime/tostring_1639682737489",
-                          "slot": "result"
-                        },
-                        "to": {
-                          "node": "string/append_1639682749777",
-                          "slot": "append"
-                        }
-                      }
-                    }
-                  }
-                },
-                "of": "node",
-                "id": "datetime/tostring_1639682737489"
-              },
-              "console/consolelog_1639682744889": {
-                "name": "Console log",
-                "code": "console/consolelog",
-                "type": "execute",
-                "inputs": {
-                  "call": {
-                    "code": "call",
-                    "name": "Call",
-                    "type": "basic/execute",
-                    "connections": {
-                      "edge_1639702605176": {
-                        "id": "edge_1639702605176",
-                        "type": "basic/execute",
-                        "from": {
-                          "node": "graph/call_1639682473944",
-                          "slot": "call"
-                        },
-                        "to": {
-                          "node": "console/consolelog_1639682744889",
-                          "slot": "call"
-                        }
-                      }
-                    }
-                  },
-                  "message": {
-                    "code": "message",
-                    "name": "Message",
-                    "type": "basic/string",
-                    "connections": {
-                      "edge_1639682763361": {
-                        "id": "edge_1639682763361",
-                        "type": "basic/string",
-                        "from": {
-                          "node": "string/append_1639682749777",
-                          "slot": "result"
-                        },
-                        "to": {
-                          "node": "console/consolelog_1639682744889",
-                          "slot": "message"
-                        }
-                      }
-                    }
-                  }
-                },
-                "outputs": {
-                  "return": {
-                    "code": "return",
-                    "name": "Return",
-                    "type": "basic/execute",
-                    "connections": {
-                      "edge_1639702609583": {
-                        "id": "edge_1639702609583",
-                        "type": "basic/execute",
-                        "from": {
-                          "node": "console/consolelog_1639682744889",
-                          "slot": "return"
-                        },
-                        "to": {
-                          "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
-                          "slot": "call"
-                        }
-                      }
-                    }
-                  }
-                },
-                "of": "node",
-                "id": "console/consolelog_1639682744889"
-              },
-              "string/append_1639682749777": {
-                "name": "A+B",
-                "code": "string/append",
-                "type": "modifier",
-                "inputs": {
-                  "source": {
-                    "code": "source",
-                    "name": "A",
-                    "type": "basic/string",
-                    "value": "Cron at "
-                  },
-                  "append": {
-                    "code": "append",
-                    "name": "B",
-                    "type": "basic/string",
-                    "connections": {
-                      "edge_1639682756457": {
-                        "id": "edge_1639682756457",
-                        "type": "basic/string",
-                        "from": {
-                          "node": "datetime/tostring_1639682737489",
-                          "slot": "result"
-                        },
-                        "to": {
-                          "node": "string/append_1639682749777",
-                          "slot": "append"
-                        }
-                      }
-                    }
-                  }
-                },
-                "outputs": {
-                  "result": {
-                    "code": "result",
-                    "name": "Result",
-                    "type": "basic/string",
-                    "connections": {
-                      "edge_1639682763361": {
-                        "id": "edge_1639682763361",
-                        "type": "basic/string",
-                        "from": {
-                          "node": "string/append_1639682749777",
-                          "slot": "result"
-                        },
-                        "to": {
-                          "node": "console/consolelog_1639682744889",
-                          "slot": "message"
-                        }
-                      }
-                    }
-                  }
-                },
-                "of": "node",
-                "id": "string/append_1639682749777"
-              },
-              "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167": {
-                "name": "Demo Actor state",
-                "code": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9",
+              "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337": {
+                "name": "log actor state",
+                "code": "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b",
                 "type": "execute",
                 "deleteable": true,
                 "addable": true,
@@ -266,15 +76,15 @@
                     "name": "Call",
                     "type": "basic/execute",
                     "connections": {
-                      "edge_1639702609583": {
-                        "id": "edge_1639702609583",
+                      "edge_1642046072689": {
+                        "id": "edge_1642046072689",
                         "type": "basic/execute",
                         "from": {
-                          "node": "console/consolelog_1639682744889",
-                          "slot": "return"
+                          "node": "graph/call_1642044994225",
+                          "slot": "call"
                         },
                         "to": {
-                          "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
+                          "node": "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337",
                           "slot": "call"
                         }
                       }
@@ -287,418 +97,15 @@
                     "name": "Return",
                     "type": "basic/execute",
                     "connections": {
-                      "edge_1639702649295": {
-                        "id": "edge_1639702649295",
+                      "edge_1642046211843": {
+                        "id": "edge_1642046211843",
                         "type": "basic/execute",
                         "from": {
-                          "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
+                          "node": "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337",
                           "slot": "return"
                         },
                         "to": {
-                          "node": "console/consolelog_1639702615479",
-                          "slot": "call"
-                        }
-                      }
-                    }
-                  },
-                  "counter": {
-                    "code": "counter",
-                    "name": "Counter",
-                    "type": "basic/number",
-                    "connections": {
-                      "edge_1639702629983": {
-                        "id": "edge_1639702629983",
-                        "type": "basic/number",
-                        "from": {
-                          "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
-                          "slot": "counter"
-                        },
-                        "to": {
-                          "node": "number/tostring_1639702622823",
-                          "slot": "number"
-                        }
-                      },
-                      "edge_1639858929393": {
-                        "id": "edge_1639858929393",
-                        "type": "basic/number",
-                        "from": {
-                          "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
-                          "slot": "counter"
-                        },
-                        "to": {
-                          "node": "number/gt_1639703754959",
-                          "slot": "numberA"
-                        }
-                      }
-                    }
-                  }
-                },
-                "of": "node",
-                "data": {
-                  "actor": "90df7b49-7f94-4ac7-9bec-3193f20908b9"
-                },
-                "id": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167"
-              },
-              "console/consolelog_1639702615479": {
-                "name": "Console log",
-                "code": "console/consolelog",
-                "type": "execute",
-                "inputs": {
-                  "call": {
-                    "code": "call",
-                    "name": "Call",
-                    "type": "basic/execute",
-                    "connections": {
-                      "edge_1639702649295": {
-                        "id": "edge_1639702649295",
-                        "type": "basic/execute",
-                        "from": {
-                          "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
-                          "slot": "return"
-                        },
-                        "to": {
-                          "node": "console/consolelog_1639702615479",
-                          "slot": "call"
-                        }
-                      }
-                    }
-                  },
-                  "message": {
-                    "code": "message",
-                    "name": "Message",
-                    "type": "basic/string",
-                    "connections": {
-                      "edge_1639702644983": {
-                        "id": "edge_1639702644983",
-                        "type": "basic/string",
-                        "from": {
-                          "node": "string/append_1639702634007",
-                          "slot": "result"
-                        },
-                        "to": {
-                          "node": "console/consolelog_1639702615479",
-                          "slot": "message"
-                        }
-                      }
-                    }
-                  }
-                },
-                "outputs": {
-                  "return": {
-                    "code": "return",
-                    "name": "Return",
-                    "type": "basic/execute",
-                    "connections": {
-                      "edge_1639858945728": {
-                        "id": "edge_1639858945728",
-                        "type": "basic/execute",
-                        "from": {
-                          "node": "console/consolelog_1639702615479",
-                          "slot": "return"
-                        },
-                        "to": {
-                          "node": "branches/if_1639703824689",
-                          "slot": "call"
-                        }
-                      }
-                    }
-                  }
-                },
-                "of": "node",
-                "id": "console/consolelog_1639702615479"
-              },
-              "number/tostring_1639702622823": {
-                "name": "To String",
-                "code": "number/tostring",
-                "type": "modifier",
-                "deleteable": true,
-                "addable": true,
-                "inputs": {
-                  "number": {
-                    "code": "number",
-                    "name": "Number",
-                    "type": "basic/number",
-                    "connections": {
-                      "edge_1639702629983": {
-                        "id": "edge_1639702629983",
-                        "type": "basic/number",
-                        "from": {
-                          "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
-                          "slot": "counter"
-                        },
-                        "to": {
-                          "node": "number/tostring_1639702622823",
-                          "slot": "number"
-                        }
-                      }
-                    }
-                  }
-                },
-                "outputs": {
-                  "string": {
-                    "code": "string",
-                    "name": "String",
-                    "type": "basic/string",
-                    "connections": {
-                      "edge_1639702642191": {
-                        "id": "edge_1639702642191",
-                        "type": "basic/string",
-                        "from": {
-                          "node": "number/tostring_1639702622823",
-                          "slot": "string"
-                        },
-                        "to": {
-                          "node": "string/append_1639702634007",
-                          "slot": "append"
-                        }
-                      }
-                    }
-                  }
-                },
-                "of": "node",
-                "id": "number/tostring_1639702622823"
-              },
-              "string/append_1639702634007": {
-                "name": "A+B",
-                "code": "string/append",
-                "type": "modifier",
-                "inputs": {
-                  "source": {
-                    "code": "source",
-                    "name": "A",
-                    "type": "basic/string",
-                    "value": "counter is: "
-                  },
-                  "append": {
-                    "code": "append",
-                    "name": "B",
-                    "type": "basic/string",
-                    "connections": {
-                      "edge_1639702642191": {
-                        "id": "edge_1639702642191",
-                        "type": "basic/string",
-                        "from": {
-                          "node": "number/tostring_1639702622823",
-                          "slot": "string"
-                        },
-                        "to": {
-                          "node": "string/append_1639702634007",
-                          "slot": "append"
-                        }
-                      }
-                    }
-                  }
-                },
-                "outputs": {
-                  "result": {
-                    "code": "result",
-                    "name": "Result",
-                    "type": "basic/string",
-                    "connections": {
-                      "edge_1639702644983": {
-                        "id": "edge_1639702644983",
-                        "type": "basic/string",
-                        "from": {
-                          "node": "string/append_1639702634007",
-                          "slot": "result"
-                        },
-                        "to": {
-                          "node": "console/consolelog_1639702615479",
-                          "slot": "message"
-                        }
-                      }
-                    }
-                  }
-                },
-                "of": "node",
-                "id": "string/append_1639702634007"
-              },
-              "number/gt_1639703754959": {
-                "name": "A > B",
-                "code": "number/gt",
-                "type": "modifier",
-                "deleteable": true,
-                "addable": true,
-                "inputs": {
-                  "numberA": {
-                    "code": "numberA",
-                    "name": "A",
-                    "type": "basic/number",
-                    "connections": {
-                      "edge_1639858929393": {
-                        "id": "edge_1639858929393",
-                        "type": "basic/number",
-                        "from": {
-                          "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
-                          "slot": "counter"
-                        },
-                        "to": {
-                          "node": "number/gt_1639703754959",
-                          "slot": "numberA"
-                        }
-                      }
-                    }
-                  },
-                  "numberB": {
-                    "code": "numberB",
-                    "name": "B",
-                    "type": "basic/number",
-                    "value": 20
-                  },
-                  "equal": {
-                    "code": "equal",
-                    "name": "Can be equal",
-                    "type": "basic/boolean",
-                    "value": true
-                  }
-                },
-                "outputs": {
-                  "result": {
-                    "code": "result",
-                    "name": "Result",
-                    "type": "basic/boolean",
-                    "connections": {
-                      "edge_1639703865954": {
-                        "id": "edge_1639703865954",
-                        "type": "basic/boolean",
-                        "from": {
-                          "node": "number/gt_1639703754959",
-                          "slot": "result"
-                        },
-                        "to": {
-                          "node": "branches/if_1639703824689",
-                          "slot": "condition"
-                        }
-                      }
-                    }
-                  }
-                },
-                "of": "node",
-                "id": "number/gt_1639703754959"
-              },
-              "branches/if_1639703824689": {
-                "name": "If",
-                "code": "branches/if",
-                "type": "execute",
-                "deleteable": true,
-                "addable": true,
-                "inputs": {
-                  "call": {
-                    "code": "call",
-                    "name": "Call",
-                    "type": "basic/execute",
-                    "connections": {
-                      "edge_1639858945728": {
-                        "id": "edge_1639858945728",
-                        "type": "basic/execute",
-                        "from": {
-                          "node": "console/consolelog_1639702615479",
-                          "slot": "return"
-                        },
-                        "to": {
-                          "node": "branches/if_1639703824689",
-                          "slot": "call"
-                        }
-                      }
-                    }
-                  },
-                  "condition": {
-                    "code": "condition",
-                    "name": "Condition",
-                    "type": "basic/boolean",
-                    "connections": {
-                      "edge_1639703865954": {
-                        "id": "edge_1639703865954",
-                        "type": "basic/boolean",
-                        "from": {
-                          "node": "number/gt_1639703754959",
-                          "slot": "result"
-                        },
-                        "to": {
-                          "node": "branches/if_1639703824689",
-                          "slot": "condition"
-                        }
-                      }
-                    }
-                  }
-                },
-                "outputs": {
-                  "ifTrue": {
-                    "code": "ifTrue",
-                    "name": "True",
-                    "type": "basic/execute",
-                    "connections": {
-                      "edge_1639705621191": {
-                        "id": "edge_1639705621191",
-                        "type": "basic/execute",
-                        "from": {
-                          "node": "branches/if_1639703824689",
-                          "slot": "ifTrue"
-                        },
-                        "to": {
-                          "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set_1639705616191",
-                          "slot": "call"
-                        }
-                      }
-                    }
-                  },
-                  "ifFalse": {
-                    "code": "ifFalse",
-                    "name": "False",
-                    "type": "basic/execute"
-                  }
-                },
-                "of": "node",
-                "id": "branches/if_1639703824689"
-              },
-              "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set_1639705616191": {
-                "name": "Demo Actor :: Set()",
-                "code": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set",
-                "type": "execute",
-                "deleteable": true,
-                "addable": true,
-                "inputs": {
-                  "call": {
-                    "code": "call",
-                    "name": "Call",
-                    "type": "basic/execute",
-                    "connections": {
-                      "edge_1639705621191": {
-                        "id": "edge_1639705621191",
-                        "type": "basic/execute",
-                        "from": {
-                          "node": "branches/if_1639703824689",
-                          "slot": "ifTrue"
-                        },
-                        "to": {
-                          "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set_1639705616191",
-                          "slot": "call"
-                        }
-                      }
-                    }
-                  },
-                  "counter": {
-                    "code": "counter",
-                    "name": "Counter",
-                    "type": "basic/number",
-                    "value": 3
-                  }
-                },
-                "outputs": {
-                  "return": {
-                    "code": "return",
-                    "name": "Return",
-                    "type": "basic/execute",
-                    "connections": {
-                      "edge_1639706016718": {
-                        "id": "edge_1639706016718",
-                        "type": "basic/execute",
-                        "from": {
-                          "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set_1639705616191",
-                          "slot": "return"
-                        },
-                        "to": {
-                          "node": "console/consolelog_1639706012046",
+                          "node": "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890",
                           "slot": "call"
                         }
                       }
@@ -707,40 +114,37 @@
                 },
                 "of": "node",
                 "data": {
-                  "actor": "90df7b49-7f94-4ac7-9bec-3193f20908b9",
-                  "method": "set"
+                  "library": "default",
+                  "fid": "1c251b90-9fce-4ea6-8284-5594201f126b"
                 },
-                "id": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set_1639705616191"
+                "id": "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337",
+                "valid": true
               },
-              "console/consolelog_1639706012046": {
-                "name": "Console log",
-                "code": "console/consolelog",
+              "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890": {
+                "name": "check actor state",
+                "code": "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9",
                 "type": "execute",
+                "deleteable": true,
+                "addable": true,
                 "inputs": {
                   "call": {
                     "code": "call",
                     "name": "Call",
                     "type": "basic/execute",
                     "connections": {
-                      "edge_1639706016718": {
-                        "id": "edge_1639706016718",
+                      "edge_1642046211843": {
+                        "id": "edge_1642046211843",
                         "type": "basic/execute",
                         "from": {
-                          "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set_1639705616191",
+                          "node": "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337",
                           "slot": "return"
                         },
                         "to": {
-                          "node": "console/consolelog_1639706012046",
+                          "node": "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890",
                           "slot": "call"
                         }
                       }
                     }
-                  },
-                  "message": {
-                    "code": "message",
-                    "name": "Message",
-                    "type": "basic/string",
-                    "value": "reseted to 3"
                   }
                 },
                 "outputs": {
@@ -751,175 +155,36 @@
                   }
                 },
                 "of": "node",
-                "id": "console/consolelog_1639706012046"
+                "data": {
+                  "library": "default",
+                  "fid": "7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9"
+                },
+                "id": "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890",
+                "valid": true
               }
             },
             "edges": {
-              "edge_1639682741042": {
-                "id": "edge_1639682741042",
-                "type": "basic/datetime",
-                "from": {
-                  "node": "graph/call_1639682473944",
-                  "slot": "now"
-                },
-                "to": {
-                  "node": "datetime/tostring_1639682737489",
-                  "slot": "datetime"
-                }
-              },
-              "edge_1639682756457": {
-                "id": "edge_1639682756457",
-                "type": "basic/string",
-                "from": {
-                  "node": "datetime/tostring_1639682737489",
-                  "slot": "result"
-                },
-                "to": {
-                  "node": "string/append_1639682749777",
-                  "slot": "append"
-                }
-              },
-              "edge_1639682763361": {
-                "id": "edge_1639682763361",
-                "type": "basic/string",
-                "from": {
-                  "node": "string/append_1639682749777",
-                  "slot": "result"
-                },
-                "to": {
-                  "node": "console/consolelog_1639682744889",
-                  "slot": "message"
-                }
-              },
-              "edge_1639702605176": {
-                "id": "edge_1639702605176",
+              "edge_1642046072689": {
+                "id": "edge_1642046072689",
                 "type": "basic/execute",
                 "from": {
-                  "node": "graph/call_1639682473944",
+                  "node": "graph/call_1642044994225",
                   "slot": "call"
                 },
                 "to": {
-                  "node": "console/consolelog_1639682744889",
+                  "node": "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337",
                   "slot": "call"
                 }
               },
-              "edge_1639702609583": {
-                "id": "edge_1639702609583",
+              "edge_1642046211843": {
+                "id": "edge_1642046211843",
                 "type": "basic/execute",
                 "from": {
-                  "node": "console/consolelog_1639682744889",
+                  "node": "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337",
                   "slot": "return"
                 },
                 "to": {
-                  "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
-                  "slot": "call"
-                }
-              },
-              "edge_1639702629983": {
-                "id": "edge_1639702629983",
-                "type": "basic/number",
-                "from": {
-                  "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
-                  "slot": "counter"
-                },
-                "to": {
-                  "node": "number/tostring_1639702622823",
-                  "slot": "number"
-                }
-              },
-              "edge_1639702642191": {
-                "id": "edge_1639702642191",
-                "type": "basic/string",
-                "from": {
-                  "node": "number/tostring_1639702622823",
-                  "slot": "string"
-                },
-                "to": {
-                  "node": "string/append_1639702634007",
-                  "slot": "append"
-                }
-              },
-              "edge_1639702644983": {
-                "id": "edge_1639702644983",
-                "type": "basic/string",
-                "from": {
-                  "node": "string/append_1639702634007",
-                  "slot": "result"
-                },
-                "to": {
-                  "node": "console/consolelog_1639702615479",
-                  "slot": "message"
-                }
-              },
-              "edge_1639702649295": {
-                "id": "edge_1639702649295",
-                "type": "basic/execute",
-                "from": {
-                  "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
-                  "slot": "return"
-                },
-                "to": {
-                  "node": "console/consolelog_1639702615479",
-                  "slot": "call"
-                }
-              },
-              "edge_1639703865954": {
-                "id": "edge_1639703865954",
-                "type": "basic/boolean",
-                "from": {
-                  "node": "number/gt_1639703754959",
-                  "slot": "result"
-                },
-                "to": {
-                  "node": "branches/if_1639703824689",
-                  "slot": "condition"
-                }
-              },
-              "edge_1639705621191": {
-                "id": "edge_1639705621191",
-                "type": "basic/execute",
-                "from": {
-                  "node": "branches/if_1639703824689",
-                  "slot": "ifTrue"
-                },
-                "to": {
-                  "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set_1639705616191",
-                  "slot": "call"
-                }
-              },
-              "edge_1639706016718": {
-                "id": "edge_1639706016718",
-                "type": "basic/execute",
-                "from": {
-                  "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set_1639705616191",
-                  "slot": "return"
-                },
-                "to": {
-                  "node": "console/consolelog_1639706012046",
-                  "slot": "call"
-                }
-              },
-              "edge_1639858929393": {
-                "id": "edge_1639858929393",
-                "type": "basic/number",
-                "from": {
-                  "node": "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167",
-                  "slot": "counter"
-                },
-                "to": {
-                  "node": "number/gt_1639703754959",
-                  "slot": "numberA"
-                }
-              },
-              "edge_1639858945728": {
-                "id": "edge_1639858945728",
-                "type": "basic/execute",
-                "from": {
-                  "node": "console/consolelog_1639702615479",
-                  "slot": "return"
-                },
-                "to": {
-                  "node": "branches/if_1639703824689",
+                  "node": "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890",
                   "slot": "call"
                 }
               }
@@ -927,222 +192,70 @@
           },
           "layout": {
             "parts": {
-              "graph/call_1639682473944": {
-                "x": 1033,
-                "y": 953
+              "graph/call_1642044994225": {
+                "x": 1034,
+                "y": 1151
               },
-              "datetime/tostring_1639682737489": {
-                "x": 1239,
-                "y": 1095
+              "actor/get/demo_1642045032698": {
+                "x": 1152,
+                "y": 1115
               },
-              "edge_1639682741042": {
+              "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set_1642045047067": {
+                "x": 1349,
+                "y": 1011
+              },
+              "console/consolelog_1642045141241": {
+                "x": 1863,
+                "y": 1136
+              },
+              "actor/state/demo_1642045400271": {
+                "x": 1232,
+                "y": 1155
+              },
+              "actor/get/demo_1642045406878": {
+                "x": 1077,
+                "y": 1255
+              },
+              "number/tostring_1642045433110": {
+                "x": 1462,
+                "y": 1224
+              },
+              "string/append_1642045458646": {
+                "x": 1636,
+                "y": 1197
+              },
+              "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337": {
+                "x": 1211,
+                "y": 1151
+              },
+              "edge_1642046072689": {
                 "from": {
-                  "x": 1137.9305725097656,
-                  "y": 1003.9722290039062
+                  "x": 1142.3159790039062,
+                  "y": 1188.6388854980469
                 },
                 "to": {
-                  "x": 1240.111083984375,
-                  "y": 1109.0972290039062
+                  "x": 1212.111083984375,
+                  "y": 1188.6388854980469
                 }
               },
-              "console/consolelog_1639682744889": {
-                "x": 1236,
-                "y": 954
+              "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890": {
+                "x": 1469,
+                "y": 1151
               },
-              "string/append_1639682749777": {
-                "x": 1236,
-                "y": 1033
-              },
-              "edge_1639682756457": {
+              "edge_1642046211843": {
                 "from": {
-                  "x": 1376.8992919921875,
-                  "y": 1109.0972290039062
+                  "x": 1399.5416870117188,
+                  "y": 1188.6388854980469
                 },
                 "to": {
-                  "x": 1237.111083984375,
-                  "y": 1070.0833129882812
-                }
-              },
-              "edge_1639682763361": {
-                "from": {
-                  "x": 1389.90625,
-                  "y": 1047.0971984863281
-                },
-                "to": {
-                  "x": 1237.111083984375,
-                  "y": 1004.9722290039062
-                }
-              },
-              "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9_1639702578167": {
-                "x": 1476,
-                "y": 953
-              },
-              "edge_1639702605176": {
-                "from": {
-                  "x": 1137.9305725097656,
-                  "y": 989.5278015136719
-                },
-                "to": {
-                  "x": 1237.111083984375,
-                  "y": 990.5277709960938
-                }
-              },
-              "edge_1639702609583": {
-                "from": {
-                  "x": 1391.4340209960938,
-                  "y": 990.5277709960938
-                },
-                "to": {
-                  "x": 1477.1111450195312,
-                  "y": 989.5278015136719
-                }
-              },
-              "console/consolelog_1639702615479": {
-                "x": 1752,
-                "y": 955
-              },
-              "number/tostring_1639702622823": {
-                "x": 1752,
-                "y": 1095
-              },
-              "edge_1639702629983": {
-                "from": {
-                  "x": 1664.1597290039062,
-                  "y": 1003.9722290039062
-                },
-                "to": {
-                  "x": 1753.111083984375,
-                  "y": 1109.0972290039062
-                }
-              },
-              "string/append_1639702634007": {
-                "x": 1752,
-                "y": 1035
-              },
-              "edge_1639702642191": {
-                "from": {
-                  "x": 1881.236083984375,
-                  "y": 1109.0972290039062
-                },
-                "to": {
-                  "x": 1753.111083984375,
-                  "y": 1072.0833129882812
-                }
-              },
-              "edge_1639702644983": {
-                "from": {
-                  "x": 1905.90625,
-                  "y": 1049.0971984863281
-                },
-                "to": {
-                  "x": 1753.111083984375,
-                  "y": 1005.9721984863281
-                }
-              },
-              "edge_1639702649295": {
-                "from": {
-                  "x": 1664.1597290039062,
-                  "y": 989.5278015136719
-                },
-                "to": {
-                  "x": 1753.111083984375,
-                  "y": 991.5277709960938
-                }
-              },
-              "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1639703727206": {
-                "x": 1366,
-                "y": 1295
-              },
-              "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set_1639703732302": {
-                "x": 1372,
-                "y": 1384
-              },
-              "number/gt_1639703754959": {
-                "x": 2000,
-                "y": 1040
-              },
-              "branches/if_1639703759487": {
-                "x": 1715,
-                "y": 1278
-              },
-              "branches/if_1639703824689": {
-                "x": 2002,
-                "y": 956
-              },
-              "actor/state/90df7b49-7f94-4ac7-9bec-3193f20908b9/state_1639703845794": {
-                "x": 1988,
-                "y": 953
-              },
-              "edge_1639703865954": {
-                "from": {
-                  "x": 2123.59375,
-                  "y": 1054.0971984863281
-                },
-                "to": {
-                  "x": 2003.111083984375,
-                  "y": 1006.9722290039062
-                }
-              },
-              "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1639703921948": {
-                "x": 1965,
-                "y": 1250
-              },
-              "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1639704015839": {
-                "x": 2044,
-                "y": 1268
-              },
-              "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/set_1639705616191": {
-                "x": 2227,
-                "y": 957
-              },
-              "edge_1639705621191": {
-                "from": {
-                  "x": 2137.74658203125,
-                  "y": 992.5277709960938
-                },
-                "to": {
-                  "x": 2228.1112060546875,
-                  "y": 993.5277709960938
-                }
-              },
-              "console/consolelog_1639706012046": {
-                "x": 2514,
-                "y": 957
-              },
-              "edge_1639706016718": {
-                "from": {
-                  "x": 2425.9583740234375,
-                  "y": 993.5277709960938
-                },
-                "to": {
-                  "x": 2515.111083984375,
-                  "y": 993.5277709960938
-                }
-              },
-              "edge_1639858929393": {
-                "from": {
-                  "x": 1664.1597290039062,
-                  "y": 1003.9722290039062
-                },
-                "to": {
-                  "x": 2001.111083984375,
-                  "y": 1054.0971984863281
-                }
-              },
-              "edge_1639858945728": {
-                "from": {
-                  "x": 1907.43408203125,
-                  "y": 991.5277709960938
-                },
-                "to": {
-                  "x": 2003.111083984375,
-                  "y": 992.5277709960938
+                  "x": 1470.111083984375,
+                  "y": 1188.6388854980469
                 }
               }
             },
             "field": {
-              "top": -792,
-              "left": -964,
+              "top": -1114,
+              "left": -1003,
               "width": 4000,
               "height": 3000
             },
@@ -1159,7 +272,7 @@
             "module": "cron",
             "code": "cron",
             "config": {
-              "schedule": "* * * * *"
+              "schedule": "*/5 * * * * *"
             },
             "info": {
               "code": "cron",
@@ -1179,6 +292,1120 @@
                   "type": "basic/datetime"
                 }
               }
+            }
+          }
+        },
+        "1c251b90-9fce-4ea6-8284-5594201f126b": {
+          "code": "1c251b90-9fce-4ea6-8284-5594201f126b",
+          "name": "log actor state",
+          "type": "function",
+          "library": "default",
+          "entry": "graph/call_1642045931227",
+          "context": {
+            "inputs": {},
+            "outputs": {},
+            "variables": {}
+          },
+          "graph": {
+            "nodes": {
+              "graph/call_1642045931227": {
+                "name": "Call",
+                "code": "graph/call",
+                "type": "execute",
+                "deleteable": false,
+                "addable": false,
+                "inputs": {},
+                "outputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1642045963977": {
+                        "id": "edge_1642045963977",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1642045931227",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "actor/state/demo_1642045959480",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "id": "graph/call_1642045931227",
+                "valid": true
+              },
+              "actor/get/demo_1642045950640": {
+                "name": "Demo Actor",
+                "code": "actor/get/demo",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Demo Actor",
+                    "type": "bluep/class/demo",
+                    "connections": {
+                      "edge_1642045966225": {
+                        "id": "edge_1642045966225",
+                        "type": "bluep/class/demo",
+                        "from": {
+                          "node": "actor/get/demo_1642045950640",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "actor/state/demo_1642045959480",
+                          "slot": "actor"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "90df7b49-7f94-4ac7-9bec-3193f20908b9"
+                },
+                "id": "actor/get/demo_1642045950640"
+              },
+              "actor/state/demo_1642045959480": {
+                "name": "Demo Actor",
+                "code": "actor/state/demo",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1642045963977": {
+                        "id": "edge_1642045963977",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1642045931227",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "actor/state/demo_1642045959480",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "actor": {
+                    "code": "actor",
+                    "name": "Demo Actor",
+                    "type": "bluep/class/demo",
+                    "connections": {
+                      "edge_1642045966225": {
+                        "id": "edge_1642045966225",
+                        "type": "bluep/class/demo",
+                        "from": {
+                          "node": "actor/get/demo_1642045950640",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "actor/state/demo_1642045959480",
+                          "slot": "actor"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1642046020737": {
+                        "id": "edge_1642046020737",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "actor/state/demo_1642045959480",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1642046013432",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "counter": {
+                    "code": "counter",
+                    "name": "Counter",
+                    "type": "basic/number",
+                    "connections": {
+                      "edge_1642045985912": {
+                        "id": "edge_1642045985912",
+                        "type": "basic/number",
+                        "from": {
+                          "node": "actor/state/demo_1642045959480",
+                          "slot": "counter"
+                        },
+                        "to": {
+                          "node": "number/tostring_1642045982880",
+                          "slot": "number"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "90df7b49-7f94-4ac7-9bec-3193f20908b9"
+                },
+                "id": "actor/state/demo_1642045959480"
+              },
+              "number/tostring_1642045982880": {
+                "name": "To String",
+                "code": "number/tostring",
+                "type": "modifier",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "number": {
+                    "code": "number",
+                    "name": "Number",
+                    "type": "basic/number",
+                    "connections": {
+                      "edge_1642045985912": {
+                        "id": "edge_1642045985912",
+                        "type": "basic/number",
+                        "from": {
+                          "node": "actor/state/demo_1642045959480",
+                          "slot": "counter"
+                        },
+                        "to": {
+                          "node": "number/tostring_1642045982880",
+                          "slot": "number"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "string": {
+                    "code": "string",
+                    "name": "String",
+                    "type": "basic/string",
+                    "connections": {
+                      "edge_1642046011105": {
+                        "id": "edge_1642046011105",
+                        "type": "basic/string",
+                        "from": {
+                          "node": "number/tostring_1642045982880",
+                          "slot": "string"
+                        },
+                        "to": {
+                          "node": "string/append_1642045992664",
+                          "slot": "append"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "id": "number/tostring_1642045982880"
+              },
+              "string/append_1642045992664": {
+                "name": "A+B",
+                "code": "string/append",
+                "type": "modifier",
+                "inputs": {
+                  "source": {
+                    "code": "source",
+                    "name": "A",
+                    "type": "basic/string",
+                    "value": "Actor counter is: "
+                  },
+                  "append": {
+                    "code": "append",
+                    "name": "B",
+                    "type": "basic/string",
+                    "connections": {
+                      "edge_1642046011105": {
+                        "id": "edge_1642046011105",
+                        "type": "basic/string",
+                        "from": {
+                          "node": "number/tostring_1642045982880",
+                          "slot": "string"
+                        },
+                        "to": {
+                          "node": "string/append_1642045992664",
+                          "slot": "append"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "result": {
+                    "code": "result",
+                    "name": "Result",
+                    "type": "basic/string",
+                    "connections": {
+                      "edge_1642046024265": {
+                        "id": "edge_1642046024265",
+                        "type": "basic/string",
+                        "from": {
+                          "node": "string/append_1642045992664",
+                          "slot": "result"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1642046013432",
+                          "slot": "message"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "id": "string/append_1642045992664"
+              },
+              "console/consolelog_1642046013432": {
+                "name": "Console log",
+                "code": "console/consolelog",
+                "type": "execute",
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1642046020737": {
+                        "id": "edge_1642046020737",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "actor/state/demo_1642045959480",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1642046013432",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "message": {
+                    "code": "message",
+                    "name": "Message",
+                    "type": "basic/string",
+                    "connections": {
+                      "edge_1642046024265": {
+                        "id": "edge_1642046024265",
+                        "type": "basic/string",
+                        "from": {
+                          "node": "string/append_1642045992664",
+                          "slot": "result"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1642046013432",
+                          "slot": "message"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute"
+                  }
+                },
+                "of": "node",
+                "id": "console/consolelog_1642046013432"
+              }
+            },
+            "edges": {
+              "edge_1642045963977": {
+                "id": "edge_1642045963977",
+                "type": "basic/execute",
+                "from": {
+                  "node": "graph/call_1642045931227",
+                  "slot": "call"
+                },
+                "to": {
+                  "node": "actor/state/demo_1642045959480",
+                  "slot": "call"
+                }
+              },
+              "edge_1642045966225": {
+                "id": "edge_1642045966225",
+                "type": "bluep/class/demo",
+                "from": {
+                  "node": "actor/get/demo_1642045950640",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "actor/state/demo_1642045959480",
+                  "slot": "actor"
+                }
+              },
+              "edge_1642045985912": {
+                "id": "edge_1642045985912",
+                "type": "basic/number",
+                "from": {
+                  "node": "actor/state/demo_1642045959480",
+                  "slot": "counter"
+                },
+                "to": {
+                  "node": "number/tostring_1642045982880",
+                  "slot": "number"
+                }
+              },
+              "edge_1642046011105": {
+                "id": "edge_1642046011105",
+                "type": "basic/string",
+                "from": {
+                  "node": "number/tostring_1642045982880",
+                  "slot": "string"
+                },
+                "to": {
+                  "node": "string/append_1642045992664",
+                  "slot": "append"
+                }
+              },
+              "edge_1642046020737": {
+                "id": "edge_1642046020737",
+                "type": "basic/execute",
+                "from": {
+                  "node": "actor/state/demo_1642045959480",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "console/consolelog_1642046013432",
+                  "slot": "call"
+                }
+              },
+              "edge_1642046024265": {
+                "id": "edge_1642046024265",
+                "type": "basic/string",
+                "from": {
+                  "node": "string/append_1642045992664",
+                  "slot": "result"
+                },
+                "to": {
+                  "node": "console/consolelog_1642046013432",
+                  "slot": "message"
+                }
+              }
+            }
+          },
+          "layout": {
+            "parts": {
+              "graph/call_1642045931227": {
+                "x": 1010,
+                "y": 1010
+              },
+              "actor/get/demo_1642045950640": {
+                "x": 1184,
+                "y": 1093
+              },
+              "actor/state/demo_1642045959480": {
+                "x": 1184,
+                "y": 1009
+              },
+              "edge_1642045963977": {
+                "from": {
+                  "x": 1118.3159484863281,
+                  "y": 1047.638900756836
+                },
+                "to": {
+                  "x": 1185.111083984375,
+                  "y": 1046.6388854980469
+                }
+              },
+              "edge_1642045966225": {
+                "from": {
+                  "x": 1280.9444580078125,
+                  "y": 1107.0972290039062
+                },
+                "to": {
+                  "x": 1185.111083984375,
+                  "y": 1061.0833435058594
+                }
+              },
+              "number/tostring_1642045982880": {
+                "x": 1449,
+                "y": 1149
+              },
+              "edge_1642045985912": {
+                "from": {
+                  "x": 1350.9617919921875,
+                  "y": 1061.0833435058594
+                },
+                "to": {
+                  "x": 1450.111083984375,
+                  "y": 1163.0972290039062
+                }
+              },
+              "string/append_1642045992664": {
+                "x": 1448,
+                "y": 1085
+              },
+              "edge_1642046011105": {
+                "from": {
+                  "x": 1578.236083984375,
+                  "y": 1163.0972290039062
+                },
+                "to": {
+                  "x": 1449.111083984375,
+                  "y": 1122.0833129882812
+                }
+              },
+              "console/consolelog_1642046013432": {
+                "x": 1449,
+                "y": 1009
+              },
+              "edge_1642046020737": {
+                "from": {
+                  "x": 1350.9617919921875,
+                  "y": 1046.6388854980469
+                },
+                "to": {
+                  "x": 1450.111083984375,
+                  "y": 1046.638900756836
+                }
+              },
+              "edge_1642046024265": {
+                "from": {
+                  "x": 1601.9063110351562,
+                  "y": 1099.0972290039062
+                },
+                "to": {
+                  "x": 1450.111083984375,
+                  "y": 1061.0833282470703
+                }
+              }
+            },
+            "field": {
+              "top": -952,
+              "left": -967,
+              "width": 4000,
+              "height": 3000
+            },
+            "zoom": {
+              "min": 0.4,
+              "max": 5,
+              "step": 0.3,
+              "current": 1
+            }
+          }
+        },
+        "7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9": {
+          "code": "7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9",
+          "name": "check actor state",
+          "type": "function",
+          "library": "default",
+          "entry": "graph/call_1642046093533",
+          "context": {
+            "inputs": {},
+            "outputs": {},
+            "variables": {}
+          },
+          "graph": {
+            "nodes": {
+              "graph/call_1642046093533": {
+                "name": "Call",
+                "code": "graph/call",
+                "type": "execute",
+                "deleteable": false,
+                "addable": false,
+                "inputs": {},
+                "outputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1642046123283": {
+                        "id": "edge_1642046123283",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1642046093533",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "actor/state/demo_1642046110186",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "id": "graph/call_1642046093533",
+                "valid": true
+              },
+              "actor/state/demo_1642046110186": {
+                "name": "Demo Actor",
+                "code": "actor/state/demo",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1642046123283": {
+                        "id": "edge_1642046123283",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1642046093533",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "actor/state/demo_1642046110186",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "actor": {
+                    "code": "actor",
+                    "name": "Demo Actor",
+                    "type": "bluep/class/demo",
+                    "connections": {
+                      "edge_1642046127066": {
+                        "id": "edge_1642046127066",
+                        "type": "bluep/class/demo",
+                        "from": {
+                          "node": "actor/get/demo_1642046114617",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "actor/state/demo_1642046110186",
+                          "slot": "actor"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1642046146610": {
+                        "id": "edge_1642046146610",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "actor/state/demo_1642046110186",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "branches/if_1642046138274",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "counter": {
+                    "code": "counter",
+                    "name": "Counter",
+                    "type": "basic/number",
+                    "connections": {
+                      "edge_1642046163602": {
+                        "id": "edge_1642046163602",
+                        "type": "basic/number",
+                        "from": {
+                          "node": "actor/state/demo_1642046110186",
+                          "slot": "counter"
+                        },
+                        "to": {
+                          "node": "number/gt_1642046153650",
+                          "slot": "numberA"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "90df7b49-7f94-4ac7-9bec-3193f20908b9"
+                },
+                "id": "actor/state/demo_1642046110186"
+              },
+              "actor/get/demo_1642046114617": {
+                "name": "Demo Actor",
+                "code": "actor/get/demo",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Demo Actor",
+                    "type": "bluep/class/demo",
+                    "connections": {
+                      "edge_1642046127066": {
+                        "id": "edge_1642046127066",
+                        "type": "bluep/class/demo",
+                        "from": {
+                          "node": "actor/get/demo_1642046114617",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "actor/state/demo_1642046110186",
+                          "slot": "actor"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "90df7b49-7f94-4ac7-9bec-3193f20908b9"
+                },
+                "id": "actor/get/demo_1642046114617"
+              },
+              "branches/if_1642046138274": {
+                "name": "If",
+                "code": "branches/if",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1642046146610": {
+                        "id": "edge_1642046146610",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "actor/state/demo_1642046110186",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "branches/if_1642046138274",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "condition": {
+                    "code": "condition",
+                    "name": "Condition",
+                    "type": "basic/boolean",
+                    "connections": {
+                      "edge_1642046160138": {
+                        "id": "edge_1642046160138",
+                        "type": "basic/boolean",
+                        "from": {
+                          "node": "number/gt_1642046153650",
+                          "slot": "result"
+                        },
+                        "to": {
+                          "node": "branches/if_1642046138274",
+                          "slot": "condition"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "ifTrue": {
+                    "code": "ifTrue",
+                    "name": "True",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1642046188834": {
+                        "id": "edge_1642046188834",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "branches/if_1642046138274",
+                          "slot": "ifTrue"
+                        },
+                        "to": {
+                          "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1642046182186",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "ifFalse": {
+                    "code": "ifFalse",
+                    "name": "False",
+                    "type": "basic/execute"
+                  }
+                },
+                "of": "node",
+                "id": "branches/if_1642046138274"
+              },
+              "number/gt_1642046153650": {
+                "name": "A > B",
+                "code": "number/gt",
+                "type": "modifier",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "numberA": {
+                    "code": "numberA",
+                    "name": "A",
+                    "type": "basic/number",
+                    "connections": {
+                      "edge_1642046163602": {
+                        "id": "edge_1642046163602",
+                        "type": "basic/number",
+                        "from": {
+                          "node": "actor/state/demo_1642046110186",
+                          "slot": "counter"
+                        },
+                        "to": {
+                          "node": "number/gt_1642046153650",
+                          "slot": "numberA"
+                        }
+                      }
+                    }
+                  },
+                  "numberB": {
+                    "code": "numberB",
+                    "name": "B",
+                    "type": "basic/number",
+                    "value": 5
+                  },
+                  "equal": {
+                    "code": "equal",
+                    "name": "Can be equal",
+                    "type": "basic/boolean",
+                    "value": true
+                  }
+                },
+                "outputs": {
+                  "result": {
+                    "code": "result",
+                    "name": "Result",
+                    "type": "basic/boolean",
+                    "connections": {
+                      "edge_1642046160138": {
+                        "id": "edge_1642046160138",
+                        "type": "basic/boolean",
+                        "from": {
+                          "node": "number/gt_1642046153650",
+                          "slot": "result"
+                        },
+                        "to": {
+                          "node": "branches/if_1642046138274",
+                          "slot": "condition"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "id": "number/gt_1642046153650"
+              },
+              "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1642046182186": {
+                "name": "Demo Actor :: Reset()",
+                "code": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1642046188834": {
+                        "id": "edge_1642046188834",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "branches/if_1642046138274",
+                          "slot": "ifTrue"
+                        },
+                        "to": {
+                          "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1642046182186",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "actor": {
+                    "code": "actor",
+                    "name": "Demo Actor",
+                    "type": "bluep/class/demo",
+                    "connections": {
+                      "edge_1642046198843": {
+                        "id": "edge_1642046198843",
+                        "type": "bluep/class/demo",
+                        "from": {
+                          "node": "actor/get/demo_1642046193546",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1642046182186",
+                          "slot": "actor"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute"
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "90df7b49-7f94-4ac7-9bec-3193f20908b9",
+                  "method": "reset"
+                },
+                "id": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1642046182186"
+              },
+              "actor/get/demo_1642046193546": {
+                "name": "Demo Actor",
+                "code": "actor/get/demo",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Demo Actor",
+                    "type": "bluep/class/demo",
+                    "connections": {
+                      "edge_1642046198843": {
+                        "id": "edge_1642046198843",
+                        "type": "bluep/class/demo",
+                        "from": {
+                          "node": "actor/get/demo_1642046193546",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1642046182186",
+                          "slot": "actor"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "90df7b49-7f94-4ac7-9bec-3193f20908b9"
+                },
+                "id": "actor/get/demo_1642046193546"
+              }
+            },
+            "edges": {
+              "edge_1642046123283": {
+                "id": "edge_1642046123283",
+                "type": "basic/execute",
+                "from": {
+                  "node": "graph/call_1642046093533",
+                  "slot": "call"
+                },
+                "to": {
+                  "node": "actor/state/demo_1642046110186",
+                  "slot": "call"
+                }
+              },
+              "edge_1642046127066": {
+                "id": "edge_1642046127066",
+                "type": "bluep/class/demo",
+                "from": {
+                  "node": "actor/get/demo_1642046114617",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "actor/state/demo_1642046110186",
+                  "slot": "actor"
+                }
+              },
+              "edge_1642046146610": {
+                "id": "edge_1642046146610",
+                "type": "basic/execute",
+                "from": {
+                  "node": "actor/state/demo_1642046110186",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "branches/if_1642046138274",
+                  "slot": "call"
+                }
+              },
+              "edge_1642046160138": {
+                "id": "edge_1642046160138",
+                "type": "basic/boolean",
+                "from": {
+                  "node": "number/gt_1642046153650",
+                  "slot": "result"
+                },
+                "to": {
+                  "node": "branches/if_1642046138274",
+                  "slot": "condition"
+                }
+              },
+              "edge_1642046163602": {
+                "id": "edge_1642046163602",
+                "type": "basic/number",
+                "from": {
+                  "node": "actor/state/demo_1642046110186",
+                  "slot": "counter"
+                },
+                "to": {
+                  "node": "number/gt_1642046153650",
+                  "slot": "numberA"
+                }
+              },
+              "edge_1642046188834": {
+                "id": "edge_1642046188834",
+                "type": "basic/execute",
+                "from": {
+                  "node": "branches/if_1642046138274",
+                  "slot": "ifTrue"
+                },
+                "to": {
+                  "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1642046182186",
+                  "slot": "call"
+                }
+              },
+              "edge_1642046198843": {
+                "id": "edge_1642046198843",
+                "type": "bluep/class/demo",
+                "from": {
+                  "node": "actor/get/demo_1642046193546",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1642046182186",
+                  "slot": "actor"
+                }
+              }
+            }
+          },
+          "layout": {
+            "parts": {
+              "graph/call_1642046093533": {
+                "x": 1010,
+                "y": 1010
+              },
+              "actor/state/demo_1642046110186": {
+                "x": 1189,
+                "y": 1010
+              },
+              "actor/get/demo_1642046114617": {
+                "x": 1190,
+                "y": 1096
+              },
+              "edge_1642046123283": {
+                "from": {
+                  "x": 1118.3159790039062,
+                  "y": 1047.6388854980469
+                },
+                "to": {
+                  "x": 1190.1111145019531,
+                  "y": 1047.6388854980469
+                }
+              },
+              "edge_1642046127066": {
+                "from": {
+                  "x": 1286.9444580078125,
+                  "y": 1110.0972290039062
+                },
+                "to": {
+                  "x": 1190.1111145019531,
+                  "y": 1062.0833435058594
+                }
+              },
+              "branches/if_1642046138274": {
+                "x": 1473,
+                "y": 1011
+              },
+              "edge_1642046146610": {
+                "from": {
+                  "x": 1355.9617919921875,
+                  "y": 1047.6388854980469
+                },
+                "to": {
+                  "x": 1474.111083984375,
+                  "y": 1048.638900756836
+                }
+              },
+              "number/gt_1642046153650": {
+                "x": 1472,
+                "y": 1095
+              },
+              "edge_1642046160138": {
+                "from": {
+                  "x": 1595.59375,
+                  "y": 1109.0972442626953
+                },
+                "to": {
+                  "x": 1474.111083984375,
+                  "y": 1063.0833435058594
+                }
+              },
+              "edge_1642046163602": {
+                "from": {
+                  "x": 1355.9617919921875,
+                  "y": 1062.0833435058594
+                },
+                "to": {
+                  "x": 1473.1111450195312,
+                  "y": 1109.0972442626953
+                }
+              },
+              "actor/method/90df7b49-7f94-4ac7-9bec-3193f20908b9/method/reset_1642046182186": {
+                "x": 1727,
+                "y": 1014
+              },
+              "edge_1642046188834": {
+                "from": {
+                  "x": 1608.74658203125,
+                  "y": 1048.638900756836
+                },
+                "to": {
+                  "x": 1728.111083984375,
+                  "y": 1051.6388854980469
+                }
+              },
+              "actor/get/demo_1642046193546": {
+                "x": 1724,
+                "y": 1115
+              },
+              "edge_1642046198843": {
+                "from": {
+                  "x": 1820.9444580078125,
+                  "y": 1129.0972290039062
+                },
+                "to": {
+                  "x": 1728.111083984375,
+                  "y": 1066.0833282470703
+                }
+              }
+            },
+            "field": {
+              "top": -1000,
+              "left": -999,
+              "width": 4000,
+              "height": 3000
+            },
+            "zoom": {
+              "min": 0.4,
+              "max": 5,
+              "step": 0.3,
+              "current": 1
             }
           }
         }

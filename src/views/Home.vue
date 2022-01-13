@@ -32,6 +32,8 @@ export default {
     this.$store.dispatch('init')
       .then(() => {
         this.libraries = this.$store.state.vm.libraries
+        // let's show them in console also - this is example :)
+        console.log('current libraries are: ', this.libraries)
       })
   },
   computed: {
@@ -52,18 +54,29 @@ export default {
           enum: 'bi-file-text',
           struct: 'bi-file-medical',
           function: 'bi-file-code',
-          class: '',
+          class: 'bi-journal-medical',
           library: 'bi-book',
           event: 'bi-bell',
           view: 'bi-eye',
+          chevronRight: 'bi-chevron-right',
+          chevronDown: 'bi-chevron-down',
           add: 'bi-plus',
           remove: 'bi-trash',
+          edit: 'bi-pencil-fill',
           save: 'bi-save',
           run: 'bi-play',
           close: 'bi-x',
           fw: ''
         },
         select
+        /*
+        canRun: false,  // run button can be disabled
+        dialogs: {  // dialogs methods to use instead of browser defaults
+          alert: (...args) => new Promise(),
+          confirm: (...args) => new Promise(),
+          prompt: (...args) => new Promise(),
+        }
+        */
       }
     }
   }

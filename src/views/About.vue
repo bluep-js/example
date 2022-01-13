@@ -7,6 +7,7 @@ export default {
     return {
       vm: null,
       demoActor: null,
+      debug: false,
       logs: []
     }
   },
@@ -29,6 +30,14 @@ export default {
         if (this.$refs.logs) {
           this.$refs.logs.scrollTop = this.$refs.logs.scrollHeight
         }
+      },
+      debug: (...args) => {
+        if (!this.debug) return
+        const line = args.map(a => typeof a === 'object' ? JSON.stringify(a) : a.toString()).join(' ')
+        this.logs.push(`DBG: ${line}`)
+        if (this.$refs.logs) {
+          this.$refs.logs.scrollTop = this.$refs.logs.scrollHeight
+        }
       }
     })
     this.vm.updateLibraries(this.$store.state.vm.libraries)
@@ -37,6 +46,7 @@ export default {
     this.demoActor = new DemoActor('90df7b49-7f94-4ac7-9bec-3193f20908b9')
     // and add actor to virtual machine
     this.vm.M('actor').addActor(this.demoActor)
+    this.vm.start()
   }
 }
 </script>
@@ -45,6 +55,7 @@ export default {
   <div class="about">
     <h1>Browser VM example</h1>
     <p>This page is example of @bluepjs virtual machine running in browser.</p>
+    <p><input type="checkbox" v-model="debug"/> Debug logs</p>
     <p>Machine created on page visit and destroyed on page leave.</p>
     <p>Console messsages of VM are catched and displayed below:</p>
     <div ref="logs" class="console">
