@@ -29,7 +29,7 @@
   "license": "MIT",
   "dependencies": {
     "@bluepjs/vm": "^0.3.4",
-    "@bluepjs/vue3-ide": "^0.3.4",
+    "@bluepjs/vue3-ide": "^0.3.5",
     "axios": "^0.24.0",
     "body-parser": "^1.19.1",
     "core-js": "^3.6.5",
