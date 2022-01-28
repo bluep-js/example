@@ -12,6 +12,11 @@ app.use(bodyParser.json())
 const { Vm } = require('@bluepjs/vm')
 const vm = new Vm()
 
+// add demo page module here, because IDE takes info from backend Vm. Frontend Vm is just configured same
+const PageModule = require('./src/vm/page.module')
+vm.addModule(PageModule)
+vm.M('page').init()
+
 // for simplicity sample database saved in json file
 // because library structure is fully JSON compatible
 const db = JSON.parse(fs.readFileSync('./db.json').toString())

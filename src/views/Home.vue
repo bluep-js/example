@@ -32,8 +32,6 @@ export default {
     this.$store.dispatch('init')
       .then(() => {
         this.libraries = this.$store.state.vm.libraries
-        // let's show them in console also - this is example :)
-        console.log('current libraries are: ', this.libraries)
       })
   },
   computed: {

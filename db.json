@@ -19,7 +19,7 @@
                 "code": "now",
                 "name": "Now",
                 "type": "basic/datetime",
-                "value": "2022-01-13T04:36:35.141Z"
+                "value": "2022-01-28T18:21:00.053Z"
               }
             },
             "outputs": {},
@@ -40,8 +40,8 @@
                     "name": "Call",
                     "type": "basic/execute",
                     "connections": {
-                      "edge_1642046072689": {
-                        "id": "edge_1642046072689",
+                      "edge_1643394065344": {
+                        "id": "edge_1643394065344",
                         "type": "basic/execute",
                         "from": {
                           "node": "graph/call_1642044994225",
@@ -76,8 +76,8 @@
                     "name": "Call",
                     "type": "basic/execute",
                     "connections": {
-                      "edge_1642046072689": {
-                        "id": "edge_1642046072689",
+                      "edge_1643394065344": {
+                        "id": "edge_1643394065344",
                         "type": "basic/execute",
                         "from": {
                           "node": "graph/call_1642044994225",
@@ -164,18 +164,6 @@
               }
             },
             "edges": {
-              "edge_1642046072689": {
-                "id": "edge_1642046072689",
-                "type": "basic/execute",
-                "from": {
-                  "node": "graph/call_1642044994225",
-                  "slot": "call"
-                },
-                "to": {
-                  "node": "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337",
-                  "slot": "call"
-                }
-              },
               "edge_1642046211843": {
                 "id": "edge_1642046211843",
                 "type": "basic/execute",
@@ -185,6 +173,18 @@
                 },
                 "to": {
                   "node": "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890",
+                  "slot": "call"
+                }
+              },
+              "edge_1643394065344": {
+                "id": "edge_1643394065344",
+                "type": "basic/execute",
+                "from": {
+                  "node": "graph/call_1642044994225",
+                  "slot": "call"
+                },
+                "to": {
+                  "node": "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337",
                   "slot": "call"
                 }
               }
@@ -228,28 +228,28 @@
                 "x": 1211,
                 "y": 1151
               },
-              "edge_1642046072689": {
-                "from": {
-                  "x": 1142.3159790039062,
-                  "y": 1188.6388854980469
-                },
-                "to": {
-                  "x": 1212.111083984375,
-                  "y": 1188.6388854980469
-                }
-              },
               "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890": {
                 "x": 1469,
                 "y": 1151
               },
               "edge_1642046211843": {
                 "from": {
-                  "x": 1399.5416870117188,
-                  "y": 1188.6388854980469
+                  "x": 1381,
+                  "y": 1188
                 },
                 "to": {
-                  "x": 1470.111083984375,
-                  "y": 1188.6388854980469
+                  "x": 1470,
+                  "y": 1188
+                }
+              },
+              "edge_1643394065344": {
+                "from": {
+                  "x": 1139,
+                  "y": 1188
+                },
+                "to": {
+                  "x": 1212,
+                  "y": 1188
                 }
               }
             },
@@ -372,7 +372,8 @@
                 "data": {
                   "actor": "90df7b49-7f94-4ac7-9bec-3193f20908b9"
                 },
-                "id": "actor/get/demo_1642045950640"
+                "id": "actor/get/demo_1642045950640",
+                "valid": true
               },
               "actor/state/demo_1642045959480": {
                 "name": "Demo Actor",
@@ -464,7 +465,8 @@
                 "data": {
                   "actor": "90df7b49-7f94-4ac7-9bec-3193f20908b9"
                 },
-                "id": "actor/state/demo_1642045959480"
+                "id": "actor/state/demo_1642045959480",
+                "valid": true
               },
               "number/tostring_1642045982880": {
                 "name": "To String",
@@ -515,7 +517,8 @@
                   }
                 },
                 "of": "node",
-                "id": "number/tostring_1642045982880"
+                "id": "number/tostring_1642045982880",
+                "valid": true
               },
               "string/append_1642045992664": {
                 "name": "A+B",
@@ -570,7 +573,8 @@
                   }
                 },
                 "of": "node",
-                "id": "string/append_1642045992664"
+                "id": "string/append_1642045992664",
+                "valid": true
               },
               "console/consolelog_1642046013432": {
                 "name": "Console log",
@@ -624,7 +628,8 @@
                   }
                 },
                 "of": "node",
-                "id": "console/consolelog_1642046013432"
+                "id": "console/consolelog_1642046013432",
+                "valid": true
               }
             },
             "edges": {
@@ -718,22 +723,22 @@
               },
               "edge_1642045963977": {
                 "from": {
-                  "x": 1118.3159484863281,
-                  "y": 1047.638900756836
+                  "x": 1115,
+                  "y": 1047
                 },
                 "to": {
-                  "x": 1185.111083984375,
-                  "y": 1046.6388854980469
+                  "x": 1185,
+                  "y": 1046
                 }
               },
               "edge_1642045966225": {
                 "from": {
-                  "x": 1280.9444580078125,
-                  "y": 1107.0972290039062
+                  "x": 1281,
+                  "y": 1107
                 },
                 "to": {
-                  "x": 1185.111083984375,
-                  "y": 1061.0833435058594
+                  "x": 1185,
+                  "y": 1060
                 }
               },
               "number/tostring_1642045982880": {
@@ -742,12 +747,12 @@
               },
               "edge_1642045985912": {
                 "from": {
-                  "x": 1350.9617919921875,
-                  "y": 1061.0833435058594
+                  "x": 1347,
+                  "y": 1060
                 },
                 "to": {
-                  "x": 1450.111083984375,
-                  "y": 1163.0972290039062
+                  "x": 1450,
+                  "y": 1163
                 }
               },
               "string/append_1642045992664": {
@@ -756,12 +761,12 @@
               },
               "edge_1642046011105": {
                 "from": {
-                  "x": 1578.236083984375,
-                  "y": 1163.0972290039062
+                  "x": 1578,
+                  "y": 1163
                 },
                 "to": {
-                  "x": 1449.111083984375,
-                  "y": 1122.0833129882812
+                  "x": 1449,
+                  "y": 1122
                 }
               },
               "console/consolelog_1642046013432": {
@@ -770,22 +775,22 @@
               },
               "edge_1642046020737": {
                 "from": {
-                  "x": 1350.9617919921875,
-                  "y": 1046.6388854980469
+                  "x": 1347,
+                  "y": 1046
                 },
                 "to": {
-                  "x": 1450.111083984375,
-                  "y": 1046.638900756836
+                  "x": 1450,
+                  "y": 1046
                 }
               },
               "edge_1642046024265": {
                 "from": {
-                  "x": 1601.9063110351562,
-                  "y": 1099.0972290039062
+                  "x": 1602,
+                  "y": 1099
                 },
                 "to": {
-                  "x": 1450.111083984375,
-                  "y": 1061.0833282470703
+                  "x": 1450,
+                  "y": 1060
                 }
               }
             },
@@ -1406,6 +1411,3413 @@
               "max": 5,
               "step": 0.3,
               "current": 1
+            }
+          }
+        },
+        "04690490-c6e6-4f2f-ab29-299cc6a7598b": {
+          "code": "04690490-c6e6-4f2f-ab29-299cc6a7598b",
+          "name": "VM Start",
+          "type": "function",
+          "library": "default",
+          "entry": "graph/call_1643378507464",
+          "context": {
+            "inputs": {
+              "now": {
+                "code": "now",
+                "name": "Now",
+                "type": "basic/datetime",
+                "value": "2022-01-28T16:49:04.422Z"
+              }
+            },
+            "outputs": {},
+            "variables": {}
+          },
+          "graph": {
+            "nodes": {
+              "graph/call_1643378507464": {
+                "name": "Call",
+                "code": "graph/call",
+                "type": "execute",
+                "deleteable": false,
+                "addable": false,
+                "inputs": {},
+                "outputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643387513377": {
+                        "id": "edge_1643387513377",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1643378507464",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643378528484",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "now": {
+                    "code": "now",
+                    "name": "Now",
+                    "type": "basic/datetime"
+                  }
+                },
+                "of": "node",
+                "id": "graph/call_1643378507464",
+                "valid": true
+              },
+              "actor/get/div-1_1643378520196": {
+                "name": "Div Element (div-1)",
+                "code": "actor/get/div-1",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Div Element (div-1)",
+                    "type": "bluep/class/html/div",
+                    "connections": {
+                      "edge_1643378541532": {
+                        "id": "edge_1643378541532",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-1_1643378520196",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643378528484",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "div-1"
+                },
+                "id": "actor/get/div-1_1643378520196",
+                "valid": true
+              },
+              "class/method/html/element/colorize_1643378528484": {
+                "name": "HTML Element::Colorize",
+                "code": "class/method/html/element/colorize",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643387513377": {
+                        "id": "edge_1643387513377",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1643378507464",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643378528484",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "object": {
+                    "code": "object",
+                    "name": "Object",
+                    "type": "bluep/class/html/element",
+                    "connections": {
+                      "edge_1643378541532": {
+                        "id": "edge_1643378541532",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-1_1643378520196",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643378528484",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  },
+                  "colors": {
+                    "code": "colors",
+                    "name": "Colors",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643378559028": {
+                        "id": "edge_1643378559028",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643378551604",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643378528484",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643381442522": {
+                        "id": "edge_1643381442522",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "class/method/html/element/colorize_1643378528484",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643381436986",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "colorize",
+                  "class": "html/element"
+                },
+                "id": "class/method/html/element/colorize_1643378528484",
+                "valid": true
+              },
+              "struct/pack/element/colors_1643378551604": {
+                "name": "Html elements colors",
+                "code": "struct/pack/element/colors",
+                "type": "modifier",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "background": {
+                    "code": "background",
+                    "name": "Background color",
+                    "type": "bluep/enum/html/color",
+                    "value": "#999"
+                  },
+                  "text": {
+                    "code": "text",
+                    "name": "Text color",
+                    "type": "bluep/enum/html/color",
+                    "value": "#00f"
+                  }
+                },
+                "outputs": {
+                  "struct": {
+                    "name": "Structure",
+                    "code": "struct",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643378559028": {
+                        "id": "edge_1643378559028",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643378551604",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643378528484",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "element/colors",
+                  "name": "Html elements colors",
+                  "schema": {
+                    "background": {
+                      "code": "background",
+                      "name": "Background color",
+                      "type": "bluep/enum/html/color"
+                    },
+                    "text": {
+                      "code": "text",
+                      "name": "Text color",
+                      "type": "bluep/enum/html/color"
+                    }
+                  }
+                },
+                "id": "struct/pack/element/colors_1643378551604",
+                "valid": true
+              },
+              "class/method/html/element/colorize_1643381436986": {
+                "name": "HTML Element::Colorize",
+                "code": "class/method/html/element/colorize",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643381442522": {
+                        "id": "edge_1643381442522",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "class/method/html/element/colorize_1643378528484",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643381436986",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "object": {
+                    "code": "object",
+                    "name": "Object",
+                    "type": "bluep/class/html/element",
+                    "connections": {
+                      "edge_1643381454122": {
+                        "id": "edge_1643381454122",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-2_1643381448521",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643381436986",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  },
+                  "colors": {
+                    "code": "colors",
+                    "name": "Colors",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643381464353": {
+                        "id": "edge_1643381464353",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643381459209",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643381436986",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643384990823": {
+                        "id": "edge_1643384990823",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "class/method/html/element/colorize_1643381436986",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643384985430",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "colorize",
+                  "class": "html/element"
+                },
+                "id": "class/method/html/element/colorize_1643381436986",
+                "valid": true
+              },
+              "actor/get/div-2_1643381448521": {
+                "name": "Div Element (div-2)",
+                "code": "actor/get/div-2",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Div Element (div-2)",
+                    "type": "bluep/class/html/div",
+                    "connections": {
+                      "edge_1643381454122": {
+                        "id": "edge_1643381454122",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-2_1643381448521",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643381436986",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "div-2"
+                },
+                "id": "actor/get/div-2_1643381448521",
+                "valid": true
+              },
+              "struct/pack/element/colors_1643381459209": {
+                "name": "Html elements colors",
+                "code": "struct/pack/element/colors",
+                "type": "modifier",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "background": {
+                    "code": "background",
+                    "name": "Background color",
+                    "type": "bluep/enum/html/color",
+                    "value": "#999"
+                  },
+                  "text": {
+                    "code": "text",
+                    "name": "Text color",
+                    "type": "bluep/enum/html/color",
+                    "value": "#00f"
+                  }
+                },
+                "outputs": {
+                  "struct": {
+                    "name": "Structure",
+                    "code": "struct",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643381464353": {
+                        "id": "edge_1643381464353",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643381459209",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643381436986",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "element/colors",
+                  "name": "Html elements colors",
+                  "schema": {
+                    "background": {
+                      "code": "background",
+                      "name": "Background color",
+                      "type": "bluep/enum/html/color"
+                    },
+                    "text": {
+                      "code": "text",
+                      "name": "Text color",
+                      "type": "bluep/enum/html/color"
+                    }
+                  }
+                },
+                "id": "struct/pack/element/colors_1643381459209",
+                "valid": true
+              },
+              "actor/get/btn-1_1643384978662": {
+                "name": "Button Element (btn-1)",
+                "code": "actor/get/btn-1",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Button Element (btn-1)",
+                    "type": "bluep/class/html/button",
+                    "connections": {
+                      "edge_1643384999526": {
+                        "id": "edge_1643384999526",
+                        "type": "bluep/class/html/button",
+                        "from": {
+                          "node": "actor/get/btn-1_1643384978662",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643384985430",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "btn-1"
+                },
+                "id": "actor/get/btn-1_1643384978662",
+                "valid": true
+              },
+              "class/method/html/element/colorize_1643384985430": {
+                "name": "HTML Element::Colorize",
+                "code": "class/method/html/element/colorize",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643384990823": {
+                        "id": "edge_1643384990823",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "class/method/html/element/colorize_1643381436986",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643384985430",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "object": {
+                    "code": "object",
+                    "name": "Object",
+                    "type": "bluep/class/html/element",
+                    "connections": {
+                      "edge_1643384999526": {
+                        "id": "edge_1643384999526",
+                        "type": "bluep/class/html/button",
+                        "from": {
+                          "node": "actor/get/btn-1_1643384978662",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643384985430",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  },
+                  "colors": {
+                    "code": "colors",
+                    "name": "Colors",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643385041597": {
+                        "id": "edge_1643385041597",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643385035621",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643384985430",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643385075204": {
+                        "id": "edge_1643385075204",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "class/method/html/element/colorize_1643384985430",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385069869",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "colorize",
+                  "class": "html/element"
+                },
+                "id": "class/method/html/element/colorize_1643384985430",
+                "valid": true
+              },
+              "struct/pack/element/colors_1643385035621": {
+                "name": "Html elements colors",
+                "code": "struct/pack/element/colors",
+                "type": "modifier",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "background": {
+                    "code": "background",
+                    "name": "Background color",
+                    "type": "bluep/enum/html/color",
+                    "value": "#0f0"
+                  },
+                  "text": {
+                    "code": "text",
+                    "name": "Text color",
+                    "type": "bluep/enum/html/color",
+                    "value": "#00f"
+                  }
+                },
+                "outputs": {
+                  "struct": {
+                    "name": "Structure",
+                    "code": "struct",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643385041597": {
+                        "id": "edge_1643385041597",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643385035621",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643384985430",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "element/colors",
+                  "name": "Html elements colors",
+                  "schema": {
+                    "background": {
+                      "code": "background",
+                      "name": "Background color",
+                      "type": "bluep/enum/html/color"
+                    },
+                    "text": {
+                      "code": "text",
+                      "name": "Text color",
+                      "type": "bluep/enum/html/color"
+                    }
+                  }
+                },
+                "id": "struct/pack/element/colors_1643385035621",
+                "valid": true
+              },
+              "class/method/html/element/colorize_1643385069869": {
+                "name": "HTML Element::Colorize",
+                "code": "class/method/html/element/colorize",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643385075204": {
+                        "id": "edge_1643385075204",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "class/method/html/element/colorize_1643384985430",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385069869",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "object": {
+                    "code": "object",
+                    "name": "Object",
+                    "type": "bluep/class/html/element",
+                    "connections": {
+                      "edge_1643385122716": {
+                        "id": "edge_1643385122716",
+                        "type": "bluep/class/html/button",
+                        "from": {
+                          "node": "actor/get/btn-2_1643385116788",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385069869",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  },
+                  "colors": {
+                    "code": "colors",
+                    "name": "Colors",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643385134459": {
+                        "id": "edge_1643385134459",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643385128724",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385069869",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute"
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "colorize",
+                  "class": "html/element"
+                },
+                "id": "class/method/html/element/colorize_1643385069869",
+                "valid": true
+              },
+              "actor/get/btn-2_1643385116788": {
+                "name": "Button Element (btn-2)",
+                "code": "actor/get/btn-2",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Button Element (btn-2)",
+                    "type": "bluep/class/html/button",
+                    "connections": {
+                      "edge_1643385122716": {
+                        "id": "edge_1643385122716",
+                        "type": "bluep/class/html/button",
+                        "from": {
+                          "node": "actor/get/btn-2_1643385116788",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385069869",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "btn-2"
+                },
+                "id": "actor/get/btn-2_1643385116788",
+                "valid": true
+              },
+              "struct/pack/element/colors_1643385128724": {
+                "name": "Html elements colors",
+                "code": "struct/pack/element/colors",
+                "type": "modifier",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "background": {
+                    "code": "background",
+                    "name": "Background color",
+                    "type": "bluep/enum/html/color",
+                    "value": "#f00"
+                  },
+                  "text": {
+                    "code": "text",
+                    "name": "Text color",
+                    "type": "bluep/enum/html/color",
+                    "value": "#00f"
+                  }
+                },
+                "outputs": {
+                  "struct": {
+                    "name": "Structure",
+                    "code": "struct",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643385134459": {
+                        "id": "edge_1643385134459",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643385128724",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385069869",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "element/colors",
+                  "name": "Html elements colors",
+                  "schema": {
+                    "background": {
+                      "code": "background",
+                      "name": "Background color",
+                      "type": "bluep/enum/html/color"
+                    },
+                    "text": {
+                      "code": "text",
+                      "name": "Text color",
+                      "type": "bluep/enum/html/color"
+                    }
+                  }
+                },
+                "id": "struct/pack/element/colors_1643385128724",
+                "valid": true
+              }
+            },
+            "edges": {
+              "edge_1643378541532": {
+                "id": "edge_1643378541532",
+                "type": "bluep/class/html/div",
+                "from": {
+                  "node": "actor/get/div-1_1643378520196",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643378528484",
+                  "slot": "object"
+                }
+              },
+              "edge_1643378559028": {
+                "id": "edge_1643378559028",
+                "type": "bluep/struct/element/colors",
+                "from": {
+                  "node": "struct/pack/element/colors_1643378551604",
+                  "slot": "struct"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643378528484",
+                  "slot": "colors"
+                }
+              },
+              "edge_1643381442522": {
+                "id": "edge_1643381442522",
+                "type": "basic/execute",
+                "from": {
+                  "node": "class/method/html/element/colorize_1643378528484",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643381436986",
+                  "slot": "call"
+                }
+              },
+              "edge_1643381454122": {
+                "id": "edge_1643381454122",
+                "type": "bluep/class/html/div",
+                "from": {
+                  "node": "actor/get/div-2_1643381448521",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643381436986",
+                  "slot": "object"
+                }
+              },
+              "edge_1643381464353": {
+                "id": "edge_1643381464353",
+                "type": "bluep/struct/element/colors",
+                "from": {
+                  "node": "struct/pack/element/colors_1643381459209",
+                  "slot": "struct"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643381436986",
+                  "slot": "colors"
+                }
+              },
+              "edge_1643384990823": {
+                "id": "edge_1643384990823",
+                "type": "basic/execute",
+                "from": {
+                  "node": "class/method/html/element/colorize_1643381436986",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643384985430",
+                  "slot": "call"
+                }
+              },
+              "edge_1643384999526": {
+                "id": "edge_1643384999526",
+                "type": "bluep/class/html/button",
+                "from": {
+                  "node": "actor/get/btn-1_1643384978662",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643384985430",
+                  "slot": "object"
+                }
+              },
+              "edge_1643385041597": {
+                "id": "edge_1643385041597",
+                "type": "bluep/struct/element/colors",
+                "from": {
+                  "node": "struct/pack/element/colors_1643385035621",
+                  "slot": "struct"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643384985430",
+                  "slot": "colors"
+                }
+              },
+              "edge_1643385075204": {
+                "id": "edge_1643385075204",
+                "type": "basic/execute",
+                "from": {
+                  "node": "class/method/html/element/colorize_1643384985430",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643385069869",
+                  "slot": "call"
+                }
+              },
+              "edge_1643385122716": {
+                "id": "edge_1643385122716",
+                "type": "bluep/class/html/button",
+                "from": {
+                  "node": "actor/get/btn-2_1643385116788",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643385069869",
+                  "slot": "object"
+                }
+              },
+              "edge_1643385134459": {
+                "id": "edge_1643385134459",
+                "type": "bluep/struct/element/colors",
+                "from": {
+                  "node": "struct/pack/element/colors_1643385128724",
+                  "slot": "struct"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643385069869",
+                  "slot": "colors"
+                }
+              },
+              "edge_1643387513377": {
+                "id": "edge_1643387513377",
+                "type": "basic/execute",
+                "from": {
+                  "node": "graph/call_1643378507464",
+                  "slot": "call"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643378528484",
+                  "slot": "call"
+                }
+              }
+            }
+          },
+          "layout": {
+            "parts": {
+              "graph/call_1643378507464": {
+                "x": 1010,
+                "y": 1010
+              },
+              "actor/get/div-1_1643378520196": {
+                "x": 1205,
+                "y": 1101
+              },
+              "class/method/html/element/colorize_1643378528484": {
+                "x": 1205,
+                "y": 1010
+              },
+              "edge_1643378541532": {
+                "from": {
+                  "x": 1345,
+                  "y": 1115
+                },
+                "to": {
+                  "x": 1206,
+                  "y": 1061
+                }
+              },
+              "struct/pack/element/colors_1643378551604": {
+                "x": 1202,
+                "y": 1145
+              },
+              "edge_1643378559028": {
+                "from": {
+                  "x": 1361,
+                  "y": 1159
+                },
+                "to": {
+                  "x": 1206,
+                  "y": 1075
+                }
+              },
+              "class/method/html/element/colorize_1643381436986": {
+                "x": 1584,
+                "y": 1009
+              },
+              "edge_1643381442522": {
+                "from": {
+                  "x": 1436,
+                  "y": 1047
+                },
+                "to": {
+                  "x": 1585,
+                  "y": 1046
+                }
+              },
+              "actor/get/div-2_1643381448521": {
+                "x": 1584,
+                "y": 1100
+              },
+              "edge_1643381454122": {
+                "from": {
+                  "x": 1724,
+                  "y": 1114
+                },
+                "to": {
+                  "x": 1585,
+                  "y": 1060
+                }
+              },
+              "struct/pack/element/colors_1643381459209": {
+                "x": 1583,
+                "y": 1149
+              },
+              "edge_1643381464353": {
+                "from": {
+                  "x": 1742,
+                  "y": 1163
+                },
+                "to": {
+                  "x": 1585,
+                  "y": 1074
+                }
+              },
+              "actor/get/btn-1_1643384978662": {
+                "x": 1944,
+                "y": 1103
+              },
+              "class/method/html/element/colorize_1643384985430": {
+                "x": 1944,
+                "y": 1012
+              },
+              "edge_1643384990823": {
+                "from": {
+                  "x": 1815,
+                  "y": 1046
+                },
+                "to": {
+                  "x": 1945,
+                  "y": 1049
+                }
+              },
+              "edge_1643384999526": {
+                "from": {
+                  "x": 2104,
+                  "y": 1117
+                },
+                "to": {
+                  "x": 1945,
+                  "y": 1063
+                }
+              },
+              "struct/pack/element/colors_1643385035621": {
+                "x": 1940,
+                "y": 1146
+              },
+              "edge_1643385041597": {
+                "from": {
+                  "x": 2099,
+                  "y": 1160
+                },
+                "to": {
+                  "x": 1945,
+                  "y": 1077
+                }
+              },
+              "class/method/html/element/colorize_1643385069869": {
+                "x": 2271,
+                "y": 1012
+              },
+              "edge_1643385075204": {
+                "from": {
+                  "x": 2175,
+                  "y": 1049
+                },
+                "to": {
+                  "x": 2272,
+                  "y": 1049
+                }
+              },
+              "actor/get/btn-2_1643385116788": {
+                "x": 2270,
+                "y": 1103
+              },
+              "edge_1643385122716": {
+                "from": {
+                  "x": 2430,
+                  "y": 1117
+                },
+                "to": {
+                  "x": 2272,
+                  "y": 1063
+                }
+              },
+              "struct/pack/element/colors_1643385128724": {
+                "x": 2270,
+                "y": 1146
+              },
+              "edge_1643385134459": {
+                "from": {
+                  "x": 2429,
+                  "y": 1160
+                },
+                "to": {
+                  "x": 2272,
+                  "y": 1077
+                }
+              },
+              "edge_1643387513377": {
+                "from": {
+                  "x": 1115,
+                  "y": 1047
+                },
+                "to": {
+                  "x": 1206,
+                  "y": 1047
+                }
+              }
+            },
+            "field": {
+              "top": -904,
+              "left": -898,
+              "width": 4000,
+              "height": 3000
+            },
+            "zoom": {
+              "min": 0.5,
+              "max": 2,
+              "step": 0.1,
+              "current": 1
+            }
+          },
+          "event": {
+            "name": "",
+            "type": "event",
+            "module": "core",
+            "code": "start",
+            "config": {},
+            "info": {
+              "code": "start",
+              "name": "VM Start",
+              "outputs": {
+                "now": {
+                  "code": "now",
+                  "name": "Now",
+                  "type": "basic/datetime"
+                }
+              }
+            }
+          }
+        },
+        "637825e8-17c8-47ff-851b-7a8e33e703e9": {
+          "code": "637825e8-17c8-47ff-851b-7a8e33e703e9",
+          "name": "btn-1 Click",
+          "type": "function",
+          "library": "default",
+          "entry": "graph/call_1643384670576",
+          "context": {
+            "inputs": {},
+            "outputs": {},
+            "variables": {}
+          },
+          "graph": {
+            "nodes": {
+              "graph/call_1643384670576": {
+                "name": "Call",
+                "code": "graph/call",
+                "type": "execute",
+                "deleteable": false,
+                "addable": false,
+                "inputs": {},
+                "outputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643385491529": {
+                        "id": "edge_1643385491529",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1643384670576",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385386112",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "id": "graph/call_1643384670576",
+                "valid": true
+              },
+              "class/get/html/element/colors_1643385194667": {
+                "name": "HTML Element::Colors",
+                "code": "class/get/html/element/colors",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "object": {
+                    "code": "object",
+                    "name": "Object",
+                    "type": "bluep/class/html/element",
+                    "connections": {
+                      "edge_1643385259924": {
+                        "id": "edge_1643385259924",
+                        "type": "bluep/class/html/button",
+                        "from": {
+                          "node": "actor/get/btn-1_1643385255810",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/get/html/element/colors_1643385194667",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "colors": {
+                    "code": "colors",
+                    "name": "Colors",
+                    "access": "public",
+                    "readonly": true,
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643385282194": {
+                        "id": "edge_1643385282194",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "class/get/html/element/colors_1643385194667",
+                          "slot": "colors"
+                        },
+                        "to": {
+                          "node": "struct/unpack/element/colors_1643385272250",
+                          "slot": "struct"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "context": "schema",
+                  "code": "colors",
+                  "class": "html/element"
+                },
+                "id": "class/get/html/element/colors_1643385194667",
+                "valid": true
+              },
+              "actor/get/btn-1_1643385255810": {
+                "name": "Button Element (btn-1)",
+                "code": "actor/get/btn-1",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Button Element (btn-1)",
+                    "type": "bluep/class/html/button",
+                    "connections": {
+                      "edge_1643385259924": {
+                        "id": "edge_1643385259924",
+                        "type": "bluep/class/html/button",
+                        "from": {
+                          "node": "actor/get/btn-1_1643385255810",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/get/html/element/colors_1643385194667",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "btn-1"
+                },
+                "id": "actor/get/btn-1_1643385255810",
+                "valid": true
+              },
+              "struct/unpack/element/colors_1643385272250": {
+                "name": "Html elements colors",
+                "code": "struct/unpack/element/colors",
+                "type": "modifier",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "struct": {
+                    "name": "Structure",
+                    "code": "struct",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643385282194": {
+                        "id": "edge_1643385282194",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "class/get/html/element/colors_1643385194667",
+                          "slot": "colors"
+                        },
+                        "to": {
+                          "node": "struct/unpack/element/colors_1643385272250",
+                          "slot": "struct"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "background": {
+                    "code": "background",
+                    "name": "Background color",
+                    "type": "bluep/enum/html/color",
+                    "connections": {
+                      "edge_1643386532349": {
+                        "id": "edge_1643386532349",
+                        "type": "bluep/enum/html/color",
+                        "from": {
+                          "node": "struct/unpack/element/colors_1643385272250",
+                          "slot": "background"
+                        },
+                        "to": {
+                          "node": "struct/pack/element/colors_1643385408073",
+                          "slot": "text"
+                        }
+                      }
+                    }
+                  },
+                  "text": {
+                    "code": "text",
+                    "name": "Text color",
+                    "type": "bluep/enum/html/color",
+                    "connections": {}
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "element/colors",
+                  "name": "Html elements colors",
+                  "schema": {
+                    "background": {
+                      "code": "background",
+                      "name": "Background color",
+                      "type": "bluep/enum/html/color"
+                    },
+                    "text": {
+                      "code": "text",
+                      "name": "Text color",
+                      "type": "bluep/enum/html/color"
+                    }
+                  }
+                },
+                "id": "struct/unpack/element/colors_1643385272250",
+                "valid": true
+              },
+              "class/get/html/element/colors_1643385335258": {
+                "name": "HTML Element::Colors",
+                "code": "class/get/html/element/colors",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "object": {
+                    "code": "object",
+                    "name": "Object",
+                    "type": "bluep/class/html/element",
+                    "connections": {
+                      "edge_1643385350970": {
+                        "id": "edge_1643385350970",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-1_1643385345738",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/get/html/element/colors_1643385335258",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "colors": {
+                    "code": "colors",
+                    "name": "Colors",
+                    "access": "public",
+                    "readonly": true,
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643385369441": {
+                        "id": "edge_1643385369441",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "class/get/html/element/colors_1643385335258",
+                          "slot": "colors"
+                        },
+                        "to": {
+                          "node": "struct/unpack/element/colors_1643385360746",
+                          "slot": "struct"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "context": "schema",
+                  "code": "colors",
+                  "class": "html/element"
+                },
+                "id": "class/get/html/element/colors_1643385335258",
+                "valid": true
+              },
+              "actor/get/div-1_1643385345738": {
+                "name": "Div Element (div-1)",
+                "code": "actor/get/div-1",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Div Element (div-1)",
+                    "type": "bluep/class/html/div",
+                    "connections": {
+                      "edge_1643385350970": {
+                        "id": "edge_1643385350970",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-1_1643385345738",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/get/html/element/colors_1643385335258",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "div-1"
+                },
+                "id": "actor/get/div-1_1643385345738",
+                "valid": true
+              },
+              "struct/unpack/element/colors_1643385360746": {
+                "name": "Html elements colors",
+                "code": "struct/unpack/element/colors",
+                "type": "modifier",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "struct": {
+                    "name": "Structure",
+                    "code": "struct",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643385369441": {
+                        "id": "edge_1643385369441",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "class/get/html/element/colors_1643385335258",
+                          "slot": "colors"
+                        },
+                        "to": {
+                          "node": "struct/unpack/element/colors_1643385360746",
+                          "slot": "struct"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "background": {
+                    "code": "background",
+                    "name": "Background color",
+                    "type": "bluep/enum/html/color",
+                    "connections": {
+                      "edge_1643385424569": {
+                        "id": "edge_1643385424569",
+                        "type": "bluep/enum/html/color",
+                        "from": {
+                          "node": "struct/unpack/element/colors_1643385360746",
+                          "slot": "background"
+                        },
+                        "to": {
+                          "node": "struct/pack/element/colors_1643385408073",
+                          "slot": "background"
+                        }
+                      }
+                    }
+                  },
+                  "text": {
+                    "code": "text",
+                    "name": "Text color",
+                    "type": "bluep/enum/html/color"
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "element/colors",
+                  "name": "Html elements colors",
+                  "schema": {
+                    "background": {
+                      "code": "background",
+                      "name": "Background color",
+                      "type": "bluep/enum/html/color"
+                    },
+                    "text": {
+                      "code": "text",
+                      "name": "Text color",
+                      "type": "bluep/enum/html/color"
+                    }
+                  }
+                },
+                "id": "struct/unpack/element/colors_1643385360746",
+                "valid": true
+              },
+              "class/method/html/element/colorize_1643385386112": {
+                "name": "HTML Element::Colorize",
+                "code": "class/method/html/element/colorize",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643385491529": {
+                        "id": "edge_1643385491529",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1643384670576",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385386112",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "object": {
+                    "code": "object",
+                    "name": "Object",
+                    "type": "bluep/class/html/element",
+                    "connections": {
+                      "edge_1643385399193": {
+                        "id": "edge_1643385399193",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-1_1643385393337",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385386112",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  },
+                  "colors": {
+                    "code": "colors",
+                    "name": "Colors",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643385433393": {
+                        "id": "edge_1643385433393",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643385408073",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385386112",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643387272942": {
+                        "id": "edge_1643387272942",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "class/method/html/element/colorize_1643385386112",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643387244543",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "colorize",
+                  "class": "html/element"
+                },
+                "id": "class/method/html/element/colorize_1643385386112",
+                "valid": true
+              },
+              "actor/get/div-1_1643385393337": {
+                "name": "Div Element (div-1)",
+                "code": "actor/get/div-1",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Div Element (div-1)",
+                    "type": "bluep/class/html/div",
+                    "connections": {
+                      "edge_1643385399193": {
+                        "id": "edge_1643385399193",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-1_1643385393337",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385386112",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "div-1"
+                },
+                "id": "actor/get/div-1_1643385393337",
+                "valid": true
+              },
+              "struct/pack/element/colors_1643385408073": {
+                "name": "Html elements colors",
+                "code": "struct/pack/element/colors",
+                "type": "modifier",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "background": {
+                    "code": "background",
+                    "name": "Background color",
+                    "type": "bluep/enum/html/color",
+                    "connections": {
+                      "edge_1643385424569": {
+                        "id": "edge_1643385424569",
+                        "type": "bluep/enum/html/color",
+                        "from": {
+                          "node": "struct/unpack/element/colors_1643385360746",
+                          "slot": "background"
+                        },
+                        "to": {
+                          "node": "struct/pack/element/colors_1643385408073",
+                          "slot": "background"
+                        }
+                      }
+                    }
+                  },
+                  "text": {
+                    "code": "text",
+                    "name": "Text color",
+                    "type": "bluep/enum/html/color",
+                    "connections": {
+                      "edge_1643386532349": {
+                        "id": "edge_1643386532349",
+                        "type": "bluep/enum/html/color",
+                        "from": {
+                          "node": "struct/unpack/element/colors_1643385272250",
+                          "slot": "background"
+                        },
+                        "to": {
+                          "node": "struct/pack/element/colors_1643385408073",
+                          "slot": "text"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "struct": {
+                    "name": "Structure",
+                    "code": "struct",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643385433393": {
+                        "id": "edge_1643385433393",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643385408073",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643385386112",
+                          "slot": "colors"
+                        }
+                      },
+                      "edge_1643387270878": {
+                        "id": "edge_1643387270878",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643385408073",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643387244543",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "element/colors",
+                  "name": "Html elements colors",
+                  "schema": {
+                    "background": {
+                      "code": "background",
+                      "name": "Background color",
+                      "type": "bluep/enum/html/color"
+                    },
+                    "text": {
+                      "code": "text",
+                      "name": "Text color",
+                      "type": "bluep/enum/html/color"
+                    }
+                  }
+                },
+                "id": "struct/pack/element/colors_1643385408073",
+                "valid": true
+              },
+              "class/method/html/element/colorize_1643387244543": {
+                "name": "HTML Element::Colorize",
+                "code": "class/method/html/element/colorize",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643387272942": {
+                        "id": "edge_1643387272942",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "class/method/html/element/colorize_1643385386112",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643387244543",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "object": {
+                    "code": "object",
+                    "name": "Object",
+                    "type": "bluep/class/html/element",
+                    "connections": {
+                      "edge_1643387266871": {
+                        "id": "edge_1643387266871",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-2_1643387256102",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643387244543",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  },
+                  "colors": {
+                    "code": "colors",
+                    "name": "Colors",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643387270878": {
+                        "id": "edge_1643387270878",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643385408073",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643387244543",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute"
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "colorize",
+                  "class": "html/element"
+                },
+                "id": "class/method/html/element/colorize_1643387244543",
+                "valid": true
+              },
+              "actor/get/div-2_1643387256102": {
+                "name": "Div Element (div-2)",
+                "code": "actor/get/div-2",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Div Element (div-2)",
+                    "type": "bluep/class/html/div",
+                    "connections": {
+                      "edge_1643387266871": {
+                        "id": "edge_1643387266871",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-2_1643387256102",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643387244543",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "div-2"
+                },
+                "id": "actor/get/div-2_1643387256102",
+                "valid": true
+              }
+            },
+            "edges": {
+              "edge_1643385259924": {
+                "id": "edge_1643385259924",
+                "type": "bluep/class/html/button",
+                "from": {
+                  "node": "actor/get/btn-1_1643385255810",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "class/get/html/element/colors_1643385194667",
+                  "slot": "object"
+                }
+              },
+              "edge_1643385282194": {
+                "id": "edge_1643385282194",
+                "type": "bluep/struct/element/colors",
+                "from": {
+                  "node": "class/get/html/element/colors_1643385194667",
+                  "slot": "colors"
+                },
+                "to": {
+                  "node": "struct/unpack/element/colors_1643385272250",
+                  "slot": "struct"
+                }
+              },
+              "edge_1643385350970": {
+                "id": "edge_1643385350970",
+                "type": "bluep/class/html/div",
+                "from": {
+                  "node": "actor/get/div-1_1643385345738",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "class/get/html/element/colors_1643385335258",
+                  "slot": "object"
+                }
+              },
+              "edge_1643385369441": {
+                "id": "edge_1643385369441",
+                "type": "bluep/struct/element/colors",
+                "from": {
+                  "node": "class/get/html/element/colors_1643385335258",
+                  "slot": "colors"
+                },
+                "to": {
+                  "node": "struct/unpack/element/colors_1643385360746",
+                  "slot": "struct"
+                }
+              },
+              "edge_1643385399193": {
+                "id": "edge_1643385399193",
+                "type": "bluep/class/html/div",
+                "from": {
+                  "node": "actor/get/div-1_1643385393337",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643385386112",
+                  "slot": "object"
+                }
+              },
+              "edge_1643385424569": {
+                "id": "edge_1643385424569",
+                "type": "bluep/enum/html/color",
+                "from": {
+                  "node": "struct/unpack/element/colors_1643385360746",
+                  "slot": "background"
+                },
+                "to": {
+                  "node": "struct/pack/element/colors_1643385408073",
+                  "slot": "background"
+                }
+              },
+              "edge_1643385433393": {
+                "id": "edge_1643385433393",
+                "type": "bluep/struct/element/colors",
+                "from": {
+                  "node": "struct/pack/element/colors_1643385408073",
+                  "slot": "struct"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643385386112",
+                  "slot": "colors"
+                }
+              },
+              "edge_1643385491529": {
+                "id": "edge_1643385491529",
+                "type": "basic/execute",
+                "from": {
+                  "node": "graph/call_1643384670576",
+                  "slot": "call"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643385386112",
+                  "slot": "call"
+                }
+              },
+              "edge_1643386532349": {
+                "id": "edge_1643386532349",
+                "type": "bluep/enum/html/color",
+                "from": {
+                  "node": "struct/unpack/element/colors_1643385272250",
+                  "slot": "background"
+                },
+                "to": {
+                  "node": "struct/pack/element/colors_1643385408073",
+                  "slot": "text"
+                }
+              },
+              "edge_1643387266871": {
+                "id": "edge_1643387266871",
+                "type": "bluep/class/html/div",
+                "from": {
+                  "node": "actor/get/div-2_1643387256102",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643387244543",
+                  "slot": "object"
+                }
+              },
+              "edge_1643387270878": {
+                "id": "edge_1643387270878",
+                "type": "bluep/struct/element/colors",
+                "from": {
+                  "node": "struct/pack/element/colors_1643385408073",
+                  "slot": "struct"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643387244543",
+                  "slot": "colors"
+                }
+              },
+              "edge_1643387272942": {
+                "id": "edge_1643387272942",
+                "type": "basic/execute",
+                "from": {
+                  "node": "class/method/html/element/colorize_1643385386112",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643387244543",
+                  "slot": "call"
+                }
+              }
+            }
+          },
+          "layout": {
+            "parts": {
+              "graph/call_1643384670576": {
+                "x": 1154,
+                "y": 1000
+              },
+              "class/get/html/element/colors_1643385194667": {
+                "x": 1158,
+                "y": 1356
+              },
+              "actor/get/btn-1_1643385255810": {
+                "x": 1158,
+                "y": 1396
+              },
+              "edge_1643385259924": {
+                "from": {
+                  "x": 1318,
+                  "y": 1410
+                },
+                "to": {
+                  "x": 1159,
+                  "y": 1370
+                }
+              },
+              "struct/unpack/element/colors_1643385272250": {
+                "x": 1159,
+                "y": 1298
+              },
+              "edge_1643385282194": {
+                "from": {
+                  "x": 1282,
+                  "y": 1370
+                },
+                "to": {
+                  "x": 1160,
+                  "y": 1312
+                }
+              },
+              "class/get/html/element/colors_1643385335258": {
+                "x": 1160,
+                "y": 1165
+              },
+              "actor/get/div-1_1643385345738": {
+                "x": 1158,
+                "y": 1208
+              },
+              "edge_1643385350970": {
+                "from": {
+                  "x": 1298,
+                  "y": 1222
+                },
+                "to": {
+                  "x": 1161,
+                  "y": 1179
+                }
+              },
+              "struct/unpack/element/colors_1643385360746": {
+                "x": 1160,
+                "y": 1111
+              },
+              "edge_1643385369441": {
+                "from": {
+                  "x": 1284,
+                  "y": 1179
+                },
+                "to": {
+                  "x": 1161,
+                  "y": 1125
+                }
+              },
+              "class/method/html/element/colorize_1643385386112": {
+                "x": 1431,
+                "y": 999
+              },
+              "actor/get/div-1_1643385393337": {
+                "x": 1430,
+                "y": 1086
+              },
+              "edge_1643385399193": {
+                "from": {
+                  "x": 1570,
+                  "y": 1100
+                },
+                "to": {
+                  "x": 1432,
+                  "y": 1050
+                }
+              },
+              "struct/pack/element/colors_1643385408073": {
+                "x": 1430,
+                "y": 1129
+              },
+              "edge_1643385424569": {
+                "from": {
+                  "x": 1363,
+                  "y": 1125
+                },
+                "to": {
+                  "x": 1431,
+                  "y": 1143
+                }
+              },
+              "edge_1643385433393": {
+                "from": {
+                  "x": 1633,
+                  "y": 1143
+                },
+                "to": {
+                  "x": 1432,
+                  "y": 1064
+                }
+              },
+              "edge_1643385491529": {
+                "from": {
+                  "x": 1259,
+                  "y": 1037
+                },
+                "to": {
+                  "x": 1432,
+                  "y": 1036
+                }
+              },
+              "edge_1643386532349": {
+                "from": {
+                  "x": 1362,
+                  "y": 1312
+                },
+                "to": {
+                  "x": 1431,
+                  "y": 1158
+                }
+              },
+              "class/method/html/element/colorize_1643387244543": {
+                "x": 1758,
+                "y": 998
+              },
+              "actor/get/div-2_1643387256102": {
+                "x": 1756,
+                "y": 1090
+              },
+              "edge_1643387266871": {
+                "from": {
+                  "x": 1896,
+                  "y": 1104
+                },
+                "to": {
+                  "x": 1759,
+                  "y": 1049
+                }
+              },
+              "edge_1643387270878": {
+                "from": {
+                  "x": 1633,
+                  "y": 1143
+                },
+                "to": {
+                  "x": 1759,
+                  "y": 1063
+                }
+              },
+              "edge_1643387272942": {
+                "from": {
+                  "x": 1662,
+                  "y": 1036
+                },
+                "to": {
+                  "x": 1759,
+                  "y": 1035
+                }
+              }
+            },
+            "field": {
+              "top": -965,
+              "left": -1113,
+              "width": 4000,
+              "height": 3000
+            },
+            "zoom": {
+              "min": 0.5,
+              "max": 2,
+              "step": 0.1,
+              "current": 1
+            }
+          },
+          "event": {
+            "name": "",
+            "type": "event",
+            "actor": "btn-1",
+            "code": "click",
+            "info": {
+              "code": "click",
+              "name": "Click"
+            }
+          }
+        },
+        "8419a1f4-e370-4da1-96dc-6d5bc7797496": {
+          "code": "8419a1f4-e370-4da1-96dc-6d5bc7797496",
+          "name": "colorize",
+          "type": "function",
+          "library": "default",
+          "entry": "graph/call_1643387872317",
+          "context": {
+            "inputs": {
+              "34037a23-87bb-484e-9419-ac0ebdb8735f": {
+                "code": "34037a23-87bb-484e-9419-ac0ebdb8735f",
+                "name": "text color",
+                "type": "bluep/enum/html/color"
+              }
+            },
+            "outputs": {},
+            "variables": {}
+          },
+          "graph": {
+            "nodes": {
+              "graph/call_1643387872317": {
+                "name": "Call",
+                "code": "graph/call",
+                "type": "execute",
+                "deleteable": false,
+                "addable": false,
+                "inputs": {},
+                "outputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643388289929": {
+                        "id": "edge_1643388289929",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1643387872317",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388268873",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "34037a23-87bb-484e-9419-ac0ebdb8735f": {
+                    "code": "34037a23-87bb-484e-9419-ac0ebdb8735f",
+                    "name": "text color",
+                    "type": "bluep/enum/html/color",
+                    "connections": {
+                      "edge_1643388257993": {
+                        "id": "edge_1643388257993",
+                        "type": "bluep/enum/html/color",
+                        "from": {
+                          "node": "graph/call_1643387872317",
+                          "slot": "34037a23-87bb-484e-9419-ac0ebdb8735f"
+                        },
+                        "to": {
+                          "node": "struct/pack/element/colors_1643388215278",
+                          "slot": "text"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "id": "graph/call_1643387872317",
+                "valid": true
+              },
+              "actor/get/div-1_1643387907478": {
+                "name": "Div Element (div-1)",
+                "code": "actor/get/div-1",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Div Element (div-1)",
+                    "type": "bluep/class/html/div",
+                    "connections": {
+                      "edge_1643387918431": {
+                        "id": "edge_1643387918431",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-1_1643387907478",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/get/html/element/colors_1643387916125",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "div-1"
+                },
+                "id": "actor/get/div-1_1643387907478",
+                "valid": true
+              },
+              "class/get/html/element/colors_1643387916125": {
+                "name": "HTML Element::Colors",
+                "code": "class/get/html/element/colors",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "object": {
+                    "code": "object",
+                    "name": "Object",
+                    "type": "bluep/class/html/element",
+                    "connections": {
+                      "edge_1643387918431": {
+                        "id": "edge_1643387918431",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-1_1643387907478",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/get/html/element/colors_1643387916125",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "colors": {
+                    "code": "colors",
+                    "name": "Colors",
+                    "access": "public",
+                    "readonly": true,
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643388231624": {
+                        "id": "edge_1643388231624",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "class/get/html/element/colors_1643387916125",
+                          "slot": "colors"
+                        },
+                        "to": {
+                          "node": "struct/unpack/element/colors_1643388016597",
+                          "slot": "struct"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "context": "schema",
+                  "code": "colors",
+                  "class": "html/element"
+                },
+                "id": "class/get/html/element/colors_1643387916125",
+                "valid": true
+              },
+              "struct/unpack/element/colors_1643388016597": {
+                "name": "Html elements colors",
+                "code": "struct/unpack/element/colors",
+                "type": "modifier",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "struct": {
+                    "name": "Structure",
+                    "code": "struct",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643388231624": {
+                        "id": "edge_1643388231624",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "class/get/html/element/colors_1643387916125",
+                          "slot": "colors"
+                        },
+                        "to": {
+                          "node": "struct/unpack/element/colors_1643388016597",
+                          "slot": "struct"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "background": {
+                    "code": "background",
+                    "name": "Background color",
+                    "type": "bluep/enum/html/color",
+                    "connections": {
+                      "edge_1643388235704": {
+                        "id": "edge_1643388235704",
+                        "type": "bluep/enum/html/color",
+                        "from": {
+                          "node": "struct/unpack/element/colors_1643388016597",
+                          "slot": "background"
+                        },
+                        "to": {
+                          "node": "struct/pack/element/colors_1643388215278",
+                          "slot": "background"
+                        }
+                      }
+                    }
+                  },
+                  "text": {
+                    "code": "text",
+                    "name": "Text color",
+                    "type": "bluep/enum/html/color"
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "element/colors",
+                  "name": "Html elements colors",
+                  "schema": {
+                    "background": {
+                      "code": "background",
+                      "name": "Background color",
+                      "type": "bluep/enum/html/color"
+                    },
+                    "text": {
+                      "code": "text",
+                      "name": "Text color",
+                      "type": "bluep/enum/html/color"
+                    }
+                  }
+                },
+                "id": "struct/unpack/element/colors_1643388016597",
+                "valid": true
+              },
+              "struct/pack/element/colors_1643388215278": {
+                "name": "Html elements colors",
+                "code": "struct/pack/element/colors",
+                "type": "modifier",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "background": {
+                    "code": "background",
+                    "name": "Background color",
+                    "type": "bluep/enum/html/color",
+                    "connections": {
+                      "edge_1643388235704": {
+                        "id": "edge_1643388235704",
+                        "type": "bluep/enum/html/color",
+                        "from": {
+                          "node": "struct/unpack/element/colors_1643388016597",
+                          "slot": "background"
+                        },
+                        "to": {
+                          "node": "struct/pack/element/colors_1643388215278",
+                          "slot": "background"
+                        }
+                      }
+                    }
+                  },
+                  "text": {
+                    "code": "text",
+                    "name": "Text color",
+                    "type": "bluep/enum/html/color",
+                    "connections": {
+                      "edge_1643388257993": {
+                        "id": "edge_1643388257993",
+                        "type": "bluep/enum/html/color",
+                        "from": {
+                          "node": "graph/call_1643387872317",
+                          "slot": "34037a23-87bb-484e-9419-ac0ebdb8735f"
+                        },
+                        "to": {
+                          "node": "struct/pack/element/colors_1643388215278",
+                          "slot": "text"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "struct": {
+                    "name": "Structure",
+                    "code": "struct",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643388286801": {
+                        "id": "edge_1643388286801",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643388215278",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388268873",
+                          "slot": "colors"
+                        }
+                      },
+                      "edge_1643388413463": {
+                        "id": "edge_1643388413463",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643388215278",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388308274",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "element/colors",
+                  "name": "Html elements colors",
+                  "schema": {
+                    "background": {
+                      "code": "background",
+                      "name": "Background color",
+                      "type": "bluep/enum/html/color"
+                    },
+                    "text": {
+                      "code": "text",
+                      "name": "Text color",
+                      "type": "bluep/enum/html/color"
+                    }
+                  }
+                },
+                "id": "struct/pack/element/colors_1643388215278",
+                "valid": true
+              },
+              "class/method/html/element/colorize_1643388268873": {
+                "name": "HTML Element::Colorize",
+                "code": "class/method/html/element/colorize",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643388289929": {
+                        "id": "edge_1643388289929",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1643387872317",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388268873",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "object": {
+                    "code": "object",
+                    "name": "Object",
+                    "type": "bluep/class/html/element",
+                    "connections": {
+                      "edge_1643388284825": {
+                        "id": "edge_1643388284825",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-1_1643388279937",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388268873",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  },
+                  "colors": {
+                    "code": "colors",
+                    "name": "Colors",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643388286801": {
+                        "id": "edge_1643388286801",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643388215278",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388268873",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643388331067": {
+                        "id": "edge_1643388331067",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "class/method/html/element/colorize_1643388268873",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388308274",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "colorize",
+                  "class": "html/element"
+                },
+                "id": "class/method/html/element/colorize_1643388268873",
+                "valid": true
+              },
+              "actor/get/div-1_1643388279937": {
+                "name": "Div Element (div-1)",
+                "code": "actor/get/div-1",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Div Element (div-1)",
+                    "type": "bluep/class/html/div",
+                    "connections": {
+                      "edge_1643388284825": {
+                        "id": "edge_1643388284825",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-1_1643388279937",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388268873",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "div-1"
+                },
+                "id": "actor/get/div-1_1643388279937",
+                "valid": true
+              },
+              "class/method/html/element/colorize_1643388308274": {
+                "name": "HTML Element::Colorize",
+                "code": "class/method/html/element/colorize",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643388331067": {
+                        "id": "edge_1643388331067",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "class/method/html/element/colorize_1643388268873",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388308274",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "object": {
+                    "code": "object",
+                    "name": "Object",
+                    "type": "bluep/class/html/element",
+                    "connections": {
+                      "edge_1643388325973": {
+                        "id": "edge_1643388325973",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-2_1643388320802",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388308274",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  },
+                  "colors": {
+                    "code": "colors",
+                    "name": "Colors",
+                    "type": "bluep/struct/element/colors",
+                    "connections": {
+                      "edge_1643388413463": {
+                        "id": "edge_1643388413463",
+                        "type": "bluep/struct/element/colors",
+                        "from": {
+                          "node": "struct/pack/element/colors_1643388215278",
+                          "slot": "struct"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388308274",
+                          "slot": "colors"
+                        }
+                      }
+                    }
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute"
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "code": "colorize",
+                  "class": "html/element"
+                },
+                "id": "class/method/html/element/colorize_1643388308274",
+                "valid": true
+              },
+              "actor/get/div-2_1643388320802": {
+                "name": "Div Element (div-2)",
+                "code": "actor/get/div-2",
+                "type": "getter",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {},
+                "outputs": {
+                  "actor": {
+                    "code": "actor",
+                    "name": "Div Element (div-2)",
+                    "type": "bluep/class/html/div",
+                    "connections": {
+                      "edge_1643388325973": {
+                        "id": "edge_1643388325973",
+                        "type": "bluep/class/html/div",
+                        "from": {
+                          "node": "actor/get/div-2_1643388320802",
+                          "slot": "actor"
+                        },
+                        "to": {
+                          "node": "class/method/html/element/colorize_1643388308274",
+                          "slot": "object"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "actor": "div-2"
+                },
+                "id": "actor/get/div-2_1643388320802",
+                "valid": true
+              }
+            },
+            "edges": {
+              "edge_1643387918431": {
+                "id": "edge_1643387918431",
+                "type": "bluep/class/html/div",
+                "from": {
+                  "node": "actor/get/div-1_1643387907478",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "class/get/html/element/colors_1643387916125",
+                  "slot": "object"
+                }
+              },
+              "edge_1643388231624": {
+                "id": "edge_1643388231624",
+                "type": "bluep/struct/element/colors",
+                "from": {
+                  "node": "class/get/html/element/colors_1643387916125",
+                  "slot": "colors"
+                },
+                "to": {
+                  "node": "struct/unpack/element/colors_1643388016597",
+                  "slot": "struct"
+                }
+              },
+              "edge_1643388235704": {
+                "id": "edge_1643388235704",
+                "type": "bluep/enum/html/color",
+                "from": {
+                  "node": "struct/unpack/element/colors_1643388016597",
+                  "slot": "background"
+                },
+                "to": {
+                  "node": "struct/pack/element/colors_1643388215278",
+                  "slot": "background"
+                }
+              },
+              "edge_1643388257993": {
+                "id": "edge_1643388257993",
+                "type": "bluep/enum/html/color",
+                "from": {
+                  "node": "graph/call_1643387872317",
+                  "slot": "34037a23-87bb-484e-9419-ac0ebdb8735f"
+                },
+                "to": {
+                  "node": "struct/pack/element/colors_1643388215278",
+                  "slot": "text"
+                }
+              },
+              "edge_1643388284825": {
+                "id": "edge_1643388284825",
+                "type": "bluep/class/html/div",
+                "from": {
+                  "node": "actor/get/div-1_1643388279937",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643388268873",
+                  "slot": "object"
+                }
+              },
+              "edge_1643388286801": {
+                "id": "edge_1643388286801",
+                "type": "bluep/struct/element/colors",
+                "from": {
+                  "node": "struct/pack/element/colors_1643388215278",
+                  "slot": "struct"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643388268873",
+                  "slot": "colors"
+                }
+              },
+              "edge_1643388289929": {
+                "id": "edge_1643388289929",
+                "type": "basic/execute",
+                "from": {
+                  "node": "graph/call_1643387872317",
+                  "slot": "call"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643388268873",
+                  "slot": "call"
+                }
+              },
+              "edge_1643388325973": {
+                "id": "edge_1643388325973",
+                "type": "bluep/class/html/div",
+                "from": {
+                  "node": "actor/get/div-2_1643388320802",
+                  "slot": "actor"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643388308274",
+                  "slot": "object"
+                }
+              },
+              "edge_1643388331067": {
+                "id": "edge_1643388331067",
+                "type": "basic/execute",
+                "from": {
+                  "node": "class/method/html/element/colorize_1643388268873",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643388308274",
+                  "slot": "call"
+                }
+              },
+              "edge_1643388413463": {
+                "id": "edge_1643388413463",
+                "type": "bluep/struct/element/colors",
+                "from": {
+                  "node": "struct/pack/element/colors_1643388215278",
+                  "slot": "struct"
+                },
+                "to": {
+                  "node": "class/method/html/element/colorize_1643388308274",
+                  "slot": "colors"
+                }
+              }
+            }
+          },
+          "layout": {
+            "parts": {
+              "graph/call_1643387872317": {
+                "x": 1093,
+                "y": 1003
+              },
+              "actor/get/div-1_1643387907478": {
+                "x": 1278,
+                "y": 1225
+              },
+              "class/get/html/element/colors_1643387916125": {
+                "x": 1282,
+                "y": 1187
+              },
+              "edge_1643387918431": {
+                "from": {
+                  "x": 1418,
+                  "y": 1239
+                },
+                "to": {
+                  "x": 1283,
+                  "y": 1201
+                }
+              },
+              "struct/unpack/element/colors_1643388016597": {
+                "x": 1281,
+                "y": 1136
+              },
+              "struct/pack/element/colors_1643388215278": {
+                "x": 1281,
+                "y": 1073
+              },
+              "edge_1643388231624": {
+                "from": {
+                  "x": 1406,
+                  "y": 1201
+                },
+                "to": {
+                  "x": 1282,
+                  "y": 1150
+                }
+              },
+              "edge_1643388235704": {
+                "from": {
+                  "x": 1484,
+                  "y": 1150
+                },
+                "to": {
+                  "x": 1282,
+                  "y": 1087
+                }
+              },
+              "edge_1643388257993": {
+                "from": {
+                  "x": 1198,
+                  "y": 1054
+                },
+                "to": {
+                  "x": 1282,
+                  "y": 1102
+                }
+              },
+              "class/method/html/element/colorize_1643388268873": {
+                "x": 1609,
+                "y": 1007
+              },
+              "actor/get/div-1_1643388279937": {
+                "x": 1608,
+                "y": 1097
+              },
+              "edge_1643388284825": {
+                "from": {
+                  "x": 1748,
+                  "y": 1111
+                },
+                "to": {
+                  "x": 1610,
+                  "y": 1058
+                }
+              },
+              "edge_1643388286801": {
+                "from": {
+                  "x": 1484,
+                  "y": 1087
+                },
+                "to": {
+                  "x": 1610,
+                  "y": 1072
+                }
+              },
+              "edge_1643388289929": {
+                "from": {
+                  "x": 1198,
+                  "y": 1040
+                },
+                "to": {
+                  "x": 1610,
+                  "y": 1044
+                }
+              },
+              "class/method/html/element/colorize_1643388308274": {
+                "x": 1614,
+                "y": 1181
+              },
+              "actor/get/div-2_1643388320802": {
+                "x": 1614,
+                "y": 1276
+              },
+              "edge_1643388325973": {
+                "from": {
+                  "x": 1754,
+                  "y": 1290
+                },
+                "to": {
+                  "x": 1615,
+                  "y": 1232
+                }
+              },
+              "edge_1643388331067": {
+                "from": {
+                  "x": 1840,
+                  "y": 1044
+                },
+                "to": {
+                  "x": 1615,
+                  "y": 1218
+                }
+              },
+              "edge_1643388413463": {
+                "from": {
+                  "x": 1484,
+                  "y": 1087
+                },
+                "to": {
+                  "x": 1615,
+                  "y": 1246
+                }
+              }
+            },
+            "field": {
+              "top": -961,
+              "left": -1061,
+              "width": 4000,
+              "height": 3000
+            },
+            "zoom": {
+              "min": 0.5,
+              "max": 2,
+              "step": 0.1,
+              "current": 1
+            }
+          }
+        },
+        "ad7500bb-f367-41a6-b257-c26d76483ab1": {
+          "code": "ad7500bb-f367-41a6-b257-c26d76483ab1",
+          "name": "btn-2 Click",
+          "type": "function",
+          "library": "default",
+          "entry": "graph/call_1643388345919",
+          "context": {
+            "inputs": {},
+            "outputs": {},
+            "variables": {}
+          },
+          "graph": {
+            "nodes": {
+              "graph/call_1643388345919": {
+                "name": "Call",
+                "code": "graph/call",
+                "type": "execute",
+                "deleteable": false,
+                "addable": false,
+                "inputs": {},
+                "outputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643388382990": {
+                        "id": "edge_1643388382990",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1643388345919",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388378101",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "id": "graph/call_1643388345919",
+                "valid": true
+              },
+              "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388378101": {
+                "name": "colorize",
+                "code": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643388382990": {
+                        "id": "edge_1643388382990",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/call_1643388345919",
+                          "slot": "call"
+                        },
+                        "to": {
+                          "node": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388378101",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "34037a23-87bb-484e-9419-ac0ebdb8735f": {
+                    "code": "34037a23-87bb-484e-9419-ac0ebdb8735f",
+                    "name": "text color",
+                    "type": "bluep/enum/html/color",
+                    "value": "#f00"
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643388484610": {
+                        "id": "edge_1643388484610",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388378101",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "datetime/wait_1643388478769",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "library": "default",
+                  "fid": "8419a1f4-e370-4da1-96dc-6d5bc7797496"
+                },
+                "id": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388378101",
+                "valid": true
+              },
+              "datetime/wait_1643388478769": {
+                "name": "Wait",
+                "code": "datetime/wait",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643388499896": {
+                        "id": "edge_1643388499896",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "datetime/wait_1643388478769",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388495641",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643388484610": {
+                        "id": "edge_1643388484610",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388378101",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "datetime/wait_1643388478769",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "ms": {
+                    "code": "ms",
+                    "name": "Ms",
+                    "type": "basic/number",
+                    "value": 2000
+                  }
+                },
+                "of": "node",
+                "id": "datetime/wait_1643388478769",
+                "valid": true
+              },
+              "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388495641": {
+                "name": "colorize",
+                "code": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1643388499896": {
+                        "id": "edge_1643388499896",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "datetime/wait_1643388478769",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388495641",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "34037a23-87bb-484e-9419-ac0ebdb8735f": {
+                    "code": "34037a23-87bb-484e-9419-ac0ebdb8735f",
+                    "name": "text color",
+                    "type": "bluep/enum/html/color",
+                    "value": "#00f"
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute"
+                  }
+                },
+                "of": "node",
+                "data": {
+                  "library": "default",
+                  "fid": "8419a1f4-e370-4da1-96dc-6d5bc7797496"
+                },
+                "id": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388495641",
+                "valid": true
+              }
+            },
+            "edges": {
+              "edge_1643388382990": {
+                "id": "edge_1643388382990",
+                "type": "basic/execute",
+                "from": {
+                  "node": "graph/call_1643388345919",
+                  "slot": "call"
+                },
+                "to": {
+                  "node": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388378101",
+                  "slot": "call"
+                }
+              },
+              "edge_1643388484610": {
+                "id": "edge_1643388484610",
+                "type": "basic/execute",
+                "from": {
+                  "node": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388378101",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "datetime/wait_1643388478769",
+                  "slot": "call"
+                }
+              },
+              "edge_1643388499896": {
+                "id": "edge_1643388499896",
+                "type": "basic/execute",
+                "from": {
+                  "node": "datetime/wait_1643388478769",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388495641",
+                  "slot": "call"
+                }
+              }
+            }
+          },
+          "layout": {
+            "parts": {
+              "graph/call_1643388345919": {
+                "x": 1010,
+                "y": 1010
+              },
+              "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388378101": {
+                "x": 1189,
+                "y": 1010
+              },
+              "edge_1643388382990": {
+                "from": {
+                  "x": 1115,
+                  "y": 1047
+                },
+                "to": {
+                  "x": 1190,
+                  "y": 1047
+                }
+              },
+              "datetime/wait_1643388478769": {
+                "x": 1392,
+                "y": 1011
+              },
+              "edge_1643388484610": {
+                "from": {
+                  "x": 1319,
+                  "y": 1047
+                },
+                "to": {
+                  "x": 1393,
+                  "y": 1048
+                }
+              },
+              "graph/function/8419a1f4-e370-4da1-96dc-6d5bc7797496_1643388495641": {
+                "x": 1583,
+                "y": 1010
+              },
+              "edge_1643388499896": {
+                "from": {
+                  "x": 1502,
+                  "y": 1048
+                },
+                "to": {
+                  "x": 1584,
+                  "y": 1047
+                }
+              }
+            },
+            "field": {
+              "top": -983,
+              "left": -983,
+              "width": 4000,
+              "height": 3000
+            },
+            "zoom": {
+              "min": 0.5,
+              "max": 2,
+              "step": 0.1,
+              "current": 1
+            }
+          },
+          "event": {
+            "name": "",
+            "type": "event",
+            "actor": "btn-2",
+            "code": "click",
+            "info": {
+              "code": "click",
+              "name": "Click"
             }
           }
         }

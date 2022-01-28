@@ -21,6 +21,8 @@ export default createStore({
   actions: {
     async init (ctx) {
       const data = await axios.get(`${apiUrl}/vm`)
+      // let's display it in console for easy inspecting
+      console.log('vm.ideData() for inspect', data.data)
       ctx.commit('setVm', data.data)
     },
     async saveAll (ctx, libs) {

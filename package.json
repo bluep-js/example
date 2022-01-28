@@ -1,6 +1,6 @@
 {
   "name": "@bluepjs/example",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "@bluepjs example - Vue 3 based app with blueprints editor and browser VM, and simple express server to store library at backend and demonstrate nodejs running VM",
   "scripts": {
     "backend": "node server.js",
@@ -28,8 +28,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@bluepjs/vm": "^0.3.4",
-    "@bluepjs/vue3-ide": "^0.3.5",
+    "@bluepjs/vm": "^0.3.5",
+    "@bluepjs/vue3-ide": "^0.3.6",
     "axios": "^0.24.0",
     "body-parser": "^1.19.1",
     "core-js": "^3.6.5",
