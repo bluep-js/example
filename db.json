@@ -19,7 +19,7 @@
                 "code": "now",
                 "name": "Now",
                 "type": "basic/datetime",
-                "value": "2022-01-29T10:39:20.137Z"
+                "value": "2022-08-03T14:31:35.034Z"
               }
             },
             "outputs": {},
@@ -151,7 +151,21 @@
                   "return": {
                     "code": "return",
                     "name": "Return",
-                    "type": "basic/execute"
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1659537105224": {
+                        "id": "edge_1659537105224",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "execute/parallel_1659537101004",
+                          "slot": "call"
+                        }
+                      }
+                    }
                   }
                 },
                 "of": "node",
@@ -161,6 +175,452 @@
                 },
                 "id": "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890",
                 "valid": true
+              },
+              "console/consolelog_1659536188758": {
+                "name": "Console log",
+                "code": "console/consolelog",
+                "type": "execute",
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1659537114166": {
+                        "id": "edge_1659537114166",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "execute/parallel_1659537101004",
+                          "slot": "branch"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1659536188758",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "message": {
+                    "code": "message",
+                    "name": "Message",
+                    "type": "basic/string",
+                    "multiple": "message",
+                    "value": "M1"
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute"
+                  }
+                },
+                "multiples": {
+                  "message": {
+                    "value": 1
+                  }
+                },
+                "of": "node",
+                "id": "console/consolelog_1659536188758",
+                "valid": true
+              },
+              "datetime/wait_1659536585762": {
+                "name": "Wait",
+                "code": "datetime/wait",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1659536600512": {
+                        "id": "edge_1659536600512",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "datetime/wait_1659536585762",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1659536596919",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1659537116502": {
+                        "id": "edge_1659537116502",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "execute/parallel_1659537101004",
+                          "slot": "branch_multiple_1659537107671"
+                        },
+                        "to": {
+                          "node": "datetime/wait_1659536585762",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "ms": {
+                    "code": "ms",
+                    "name": "Ms",
+                    "type": "basic/number",
+                    "value": 100
+                  }
+                },
+                "of": "node",
+                "id": "datetime/wait_1659536585762",
+                "valid": true
+              },
+              "console/consolelog_1659536596919": {
+                "name": "Console log",
+                "code": "console/consolelog",
+                "type": "execute",
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1659536600512": {
+                        "id": "edge_1659536600512",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "datetime/wait_1659536585762",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1659536596919",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "message": {
+                    "code": "message",
+                    "name": "Message",
+                    "type": "basic/string",
+                    "multiple": "message",
+                    "value": "M2"
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute"
+                  }
+                },
+                "multiples": {
+                  "message": {
+                    "value": 1
+                  }
+                },
+                "of": "node",
+                "id": "console/consolelog_1659536596919",
+                "valid": true
+              },
+              "datetime/wait_1659536614322": {
+                "name": "Wait",
+                "code": "datetime/wait",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1659536627307": {
+                        "id": "edge_1659536627307",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "datetime/wait_1659536614322",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1659536623912",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1659537118957": {
+                        "id": "edge_1659537118957",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "execute/parallel_1659537101004",
+                          "slot": "branch_multiple_1659537109091"
+                        },
+                        "to": {
+                          "node": "datetime/wait_1659536614322",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "ms": {
+                    "code": "ms",
+                    "name": "Ms",
+                    "type": "basic/number",
+                    "value": 50
+                  }
+                },
+                "of": "node",
+                "id": "datetime/wait_1659536614322",
+                "valid": true
+              },
+              "console/consolelog_1659536623912": {
+                "name": "Console log",
+                "code": "console/consolelog",
+                "type": "execute",
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1659536627307": {
+                        "id": "edge_1659536627307",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "datetime/wait_1659536614322",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1659536623912",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "message": {
+                    "code": "message",
+                    "name": "Message",
+                    "type": "basic/string",
+                    "multiple": "message",
+                    "value": "M3"
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute"
+                  }
+                },
+                "multiples": {
+                  "message": {
+                    "value": 1
+                  }
+                },
+                "of": "node",
+                "id": "console/consolelog_1659536623912",
+                "valid": true
+              },
+              "console/consolelog_1659536635888": {
+                "name": "Console log",
+                "code": "console/consolelog",
+                "type": "execute",
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1659537122351": {
+                        "id": "edge_1659537122351",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "execute/parallel_1659537101004",
+                          "slot": "done"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1659536635888",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "message": {
+                    "code": "message",
+                    "name": "Message",
+                    "type": "basic/string",
+                    "multiple": "message",
+                    "value": "Done"
+                  }
+                },
+                "outputs": {
+                  "return": {
+                    "code": "return",
+                    "name": "Return",
+                    "type": "basic/execute"
+                  }
+                },
+                "multiples": {
+                  "message": {
+                    "value": 1
+                  }
+                },
+                "of": "node",
+                "id": "console/consolelog_1659536635888",
+                "valid": true
+              },
+              "execute/parallel_1659537101004": {
+                "name": "Parallel",
+                "code": "execute/parallel",
+                "type": "execute",
+                "deleteable": true,
+                "addable": true,
+                "inputs": {
+                  "call": {
+                    "code": "call",
+                    "name": "Call",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1659537105224": {
+                        "id": "edge_1659537105224",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890",
+                          "slot": "return"
+                        },
+                        "to": {
+                          "node": "execute/parallel_1659537101004",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "branch": {
+                    "code": "branch",
+                    "name": "Execute",
+                    "type": "basic/boolean",
+                    "value": false,
+                    "multiple": "A"
+                  },
+                  "branch_multiple_1659537107671": {
+                    "code": "branch_multiple_1659537107671",
+                    "name": "Execute <1>",
+                    "type": "basic/boolean",
+                    "value": true,
+                    "multiple": "A"
+                  },
+                  "branch_multiple_1659537109091": {
+                    "code": "branch_multiple_1659537109091",
+                    "name": "Execute <2>",
+                    "type": "basic/boolean",
+                    "value": true,
+                    "multiple": "A"
+                  }
+                },
+                "outputs": {
+                  "done": {
+                    "code": "done",
+                    "name": "Done",
+                    "type": "basic/execute",
+                    "connections": {
+                      "edge_1659537122351": {
+                        "id": "edge_1659537122351",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "execute/parallel_1659537101004",
+                          "slot": "done"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1659536635888",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "branch": {
+                    "code": "branch",
+                    "name": "Branch",
+                    "type": "basic/execute",
+                    "multiple": "A",
+                    "connections": {
+                      "edge_1659537114166": {
+                        "id": "edge_1659537114166",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "execute/parallel_1659537101004",
+                          "slot": "branch"
+                        },
+                        "to": {
+                          "node": "console/consolelog_1659536188758",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "branch_multiple_1659537107671": {
+                    "code": "branch_multiple_1659537107671",
+                    "name": "Branch <1>",
+                    "type": "basic/execute",
+                    "multiple": "A",
+                    "connections": {
+                      "edge_1659537116502": {
+                        "id": "edge_1659537116502",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "execute/parallel_1659537101004",
+                          "slot": "branch_multiple_1659537107671"
+                        },
+                        "to": {
+                          "node": "datetime/wait_1659536585762",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  },
+                  "branch_multiple_1659537109091": {
+                    "code": "branch_multiple_1659537109091",
+                    "name": "Branch <2>",
+                    "type": "basic/execute",
+                    "multiple": "A",
+                    "connections": {
+                      "edge_1659537118957": {
+                        "id": "edge_1659537118957",
+                        "type": "basic/execute",
+                        "from": {
+                          "node": "execute/parallel_1659537101004",
+                          "slot": "branch_multiple_1659537109091"
+                        },
+                        "to": {
+                          "node": "datetime/wait_1659536614322",
+                          "slot": "call"
+                        }
+                      }
+                    }
+                  }
+                },
+                "multiples": {
+                  "A": {
+                    "min": 1,
+                    "value": 3
+                  }
+                },
+                "of": "node",
+                "id": "execute/parallel_1659537101004"
               }
             },
             "edges": {
@@ -185,6 +645,90 @@
                 },
                 "to": {
                   "node": "graph/function/1c251b90-9fce-4ea6-8284-5594201f126b_1642046067337",
+                  "slot": "call"
+                }
+              },
+              "edge_1659536600512": {
+                "id": "edge_1659536600512",
+                "type": "basic/execute",
+                "from": {
+                  "node": "datetime/wait_1659536585762",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "console/consolelog_1659536596919",
+                  "slot": "call"
+                }
+              },
+              "edge_1659536627307": {
+                "id": "edge_1659536627307",
+                "type": "basic/execute",
+                "from": {
+                  "node": "datetime/wait_1659536614322",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "console/consolelog_1659536623912",
+                  "slot": "call"
+                }
+              },
+              "edge_1659537105224": {
+                "id": "edge_1659537105224",
+                "type": "basic/execute",
+                "from": {
+                  "node": "graph/function/7e81a7c8-ba83-44ab-b4e0-0ab5369a73e9_1642046207890",
+                  "slot": "return"
+                },
+                "to": {
+                  "node": "execute/parallel_1659537101004",
+                  "slot": "call"
+                }
+              },
+              "edge_1659537114166": {
+                "id": "edge_1659537114166",
+                "type": "basic/execute",
+                "from": {
+                  "node": "execute/parallel_1659537101004",
+                  "slot": "branch"
+                },
+                "to": {
+                  "node": "console/consolelog_1659536188758",
+                  "slot": "call"
+                }
+              },
+              "edge_1659537116502": {
+                "id": "edge_1659537116502",
+                "type": "basic/execute",
+                "from": {
+                  "node": "execute/parallel_1659537101004",
+                  "slot": "branch_multiple_1659537107671"
+                },
+                "to": {
+                  "node": "datetime/wait_1659536585762",
+                  "slot": "call"
+                }
+              },
+              "edge_1659537118957": {
+                "id": "edge_1659537118957",
+                "type": "basic/execute",
+                "from": {
+                  "node": "execute/parallel_1659537101004",
+                  "slot": "branch_multiple_1659537109091"
+                },
+                "to": {
+                  "node": "datetime/wait_1659536614322",
+                  "slot": "call"
+                }
+              },
+              "edge_1659537122351": {
+                "id": "edge_1659537122351",
+                "type": "basic/execute",
+                "from": {
+                  "node": "execute/parallel_1659537101004",
+                  "slot": "done"
+                },
+                "to": {
+                  "node": "console/consolelog_1659536635888",
                   "slot": "call"
                 }
               }
@@ -250,6 +794,104 @@
                 "to": {
                   "x": 1212,
                   "y": 1188
+                }
+              },
+              "console/consolelog_1659536188758": {
+                "x": 2029,
+                "y": 1186
+              },
+              "datetime/wait_1659536585762": {
+                "x": 2026,
+                "y": 1323
+              },
+              "console/consolelog_1659536596919": {
+                "x": 2221,
+                "y": 1327
+              },
+              "edge_1659536600512": {
+                "from": {
+                  "x": 2136,
+                  "y": 1360
+                },
+                "to": {
+                  "x": 2222,
+                  "y": 1364
+                }
+              },
+              "datetime/wait_1659536614322": {
+                "x": 2026,
+                "y": 1453
+              },
+              "console/consolelog_1659536623912": {
+                "x": 2227,
+                "y": 1455
+              },
+              "edge_1659536627307": {
+                "from": {
+                  "x": 2136,
+                  "y": 1490
+                },
+                "to": {
+                  "x": 2228,
+                  "y": 1492
+                }
+              },
+              "console/consolelog_1659536635888": {
+                "x": 2030,
+                "y": 1616
+              },
+              "execute/parallel_1659537101004": {
+                "x": 1738,
+                "y": 1173
+              },
+              "edge_1659537105224": {
+                "from": {
+                  "x": 1656,
+                  "y": 1188
+                },
+                "to": {
+                  "x": 1739,
+                  "y": 1210
+                }
+              },
+              "edge_1659537114166": {
+                "from": {
+                  "x": 1880,
+                  "y": 1225
+                },
+                "to": {
+                  "x": 2030,
+                  "y": 1223
+                }
+              },
+              "edge_1659537116502": {
+                "from": {
+                  "x": 1880,
+                  "y": 1267
+                },
+                "to": {
+                  "x": 2027,
+                  "y": 1360
+                }
+              },
+              "edge_1659537118957": {
+                "from": {
+                  "x": 1880,
+                  "y": 1289
+                },
+                "to": {
+                  "x": 2027,
+                  "y": 1490
+                }
+              },
+              "edge_1659537122351": {
+                "from": {
+                  "x": 1880,
+                  "y": 1210
+                },
+                "to": {
+                  "x": 2031,
+                  "y": 1653
                 }
               }
             },
@@ -1432,7 +2074,7 @@
                 "code": "now",
                 "name": "Now",
                 "type": "basic/datetime",
-                "value": "2022-01-29T10:39:08.119Z"
+                "value": "2022-08-03T14:31:16.604Z"
               }
             },
             "outputs": {},
@@ -4403,7 +5045,7 @@
               "edge_1643388257993": {
                 "from": {
                   "x": 1198,
-                  "y": 1054
+                  "y": 1055
                 },
                 "to": {
                   "x": 1282,
@@ -4425,7 +5067,7 @@
                 },
                 "to": {
                   "x": 1610,
-                  "y": 1058
+                  "y": 1059
                 }
               },
               "edge_1643388286801": {
@@ -4435,7 +5077,7 @@
                 },
                 "to": {
                   "x": 1610,
-                  "y": 1072
+                  "y": 1074
                 }
               },
               "edge_1643388289929": {
@@ -4463,7 +5105,7 @@
                 },
                 "to": {
                   "x": 1615,
-                  "y": 1232
+                  "y": 1233
                 }
               },
               "edge_1643388331067": {
@@ -4483,7 +5125,7 @@
                 },
                 "to": {
                   "x": 1615,
-                  "y": 1246
+                  "y": 1248
                 }
               }
             },
