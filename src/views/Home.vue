@@ -49,12 +49,14 @@ export default {
       }
       return {
         icons: {
+          // bluep entities
           enum: 'bi-file-text',
           struct: 'bi-file-medical',
           function: 'bi-file-code',
           class: 'bi-journal-medical',
           library: 'bi-book',
           event: 'bi-bell',
+          // various ui icons
           view: 'bi-eye',
           chevronRight: 'bi-chevron-right',
           chevronDown: 'bi-chevron-down',
@@ -64,7 +66,22 @@ export default {
           save: 'bi-save',
           run: 'bi-play',
           close: 'bi-x',
-          fw: ''
+          fw: '',
+          // tools
+          toolArrow: 'bi-cursor',
+          toolEraser: 'bi-eraser',
+          toolSelectBox: 'bi-plus-square-dotted',
+          toolDeselectBox: 'bi-dash-square-dotted',
+          // zoom icons
+          zoom: 'bi-search',
+          zoomIn: 'bi-zoom-in',
+          zoomOut: 'bi-zoom-out',
+          // snap to grid
+          snapToGrid: 'bi-border',
+          // clipboard
+          clipboardCopy: 'bi-files',
+          clipboardCut: 'bi-scissors',
+          clipboardPaste: 'bi-clipboard'
         },
         select
         /*
